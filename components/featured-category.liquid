@@ -1,0 +1,24 @@
+{% if component.options.permalink != blank %}
+{% assign cat = store.category[component.options.permalink] %}
+{% if cat.products.count != 0 %}
+<div id="featured-category-{{component.id}}" class="container mb-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="block-header text-center">{{ cat.name}}</h2>
+    </div>
+  </div>
+  <div class="row mb-md-5 mb-4 mx-md-n2 {% if options.product_block_2_columns %}mx-n1{% endif %} no-gutters">
+    {% for product in cat.products limit:component.options.limit %}
+    <div class="col-lg-3 {% if options.product_block_2_columns %}col-6 px-md-2 px-1{% else %}col-sm-6 px-2{% endif %}">
+      {% include 'list_product' with product %}
+    </div>
+    {% endfor %}
+    {% if component.options.button != blank %}
+    <div class="col-12 text-center mt-3">
+      <a href="{{cat.url}}" title="{% t 'View All in' %} {{ cat.name}}" class="btn btn-primary">{% t "View All" %}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% endif %}

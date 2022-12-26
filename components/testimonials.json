@@ -1,0 +1,136 @@
+{
+  "name": "Testimonials",
+  "icon": "quote-right",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "title": {
+      "name": "Title",
+      "type": "input",
+      "help": "",
+      "default": "Testimonials"
+    },
+    "testimonials_autoplay": {
+      "name": "Activate Autoplay",
+      "type": "checkbox",
+      "help": "",
+      "default": true
+    },
+    "testimonials_autoplay_speed": {
+      "name": "Autoplay Time Out",
+      "type": "select",
+      "help": "",
+      "default": "3000",
+      "options": [
+        {
+          "1 second": "1000"
+        },
+        {
+          "2 seconds": "2000"
+        },
+        {
+          "3 seconds": "3000"
+        },
+        {
+          "4 seconds": "4000"
+        },
+        {
+          "5 seconds": "5000"
+        }
+      ]
+    },
+    "testimonial_text_1": {
+      "name": "Testimonial Text 1",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_author_1": {
+      "name": "Testimonial Author 1",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_img_1": {
+      "name": "Author Image 1 (Suggested: 50x50)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_text_2": {
+      "name": "Testimonial Text 2",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_author_2": {
+      "name": "Testimonial Author 2",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_img_2": {
+      "name": "Author Image 2 (Suggested: 50x50)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_text_3": {
+      "name": "Testimonial Text 3",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_author_3": {
+      "name": "Testimonial Author 3",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_img_3": {
+      "name": "Author Image 3 (Suggested: 50x50)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_text_4": {
+      "name": "Testimonial Text 4",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_author_4": {
+      "name": "Testimonial Author 4",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_img_4": {
+      "name": "Author Image 4 (Suggested: 50x50)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_text_5": {
+      "name": "Testimonial Text 5",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_author_5": {
+      "name": "Testimonial Author 5",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "testimonial_img_5": {
+      "name": "Author Image 5 (Suggested: 50x50)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    }
+  }
+}

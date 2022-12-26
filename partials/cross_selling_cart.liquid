@@ -1,0 +1,66 @@
+{% unless cross_selling.products_count == 0 %}
+<div class="row mt-5">
+  <div class="col-12">
+    <h2 class="card-title">{% t "You might also be interested in" %}</h2>
+  </div>
+</div>
+<div class="row mx-md-n2 mx-n1 no-gutters">
+  {% for cs_product in cross_selling.products %}
+  <div class="col-md-3 col-6 px-md-2 px-1 mb-3">
+    <div class="product-block p-md-3 p-2 rounded trsn h-100">
+      <a href="{{cs_product.url}}" class="product-image d-block {% if cs_product.stock == 0 and cs_product.stock_unlimited == false  %}not-available{% elsif cs_product.status == 'not-available'%}not-available{% endif %}">
+
+        {% if cs_product.discount > 0 %}
+        <span class="badge status-tag sale">-{{ cs_product.discount | divided_by:cs_product.price | times:100 | round:0 }}&percnt;</span>
+        {% endif %}
+
+        {% if cs_product.variant.image != blank %}
+        <img class="w-100 mb-2" src="{{cs_product.variant.image | resize: '160x160'}}" srcset="{{cs_product.variant.image | resize: '160x160'}} 1x,{{cs_product.variant.image | resize: '320x320'}} 2x" alt="{{cs_product.name | escape}}" />
+        {% elsif cs_product.images != empty %}
+        <img class="w-100 mb-2" src="{{cs_product.images.first | resize: '160x160'}}" srcset="{{cs_product.images.first | resize: '160x160'}} 1x,{{cs_product.images.first | resize: '320x320'}} 2x" alt="{{cs_product.name | escape}}" />
+        {% else %}
+        <img class="w-100 mb-2" src="//assets.jumpseller.com/public/placeholder/themes/simple/no-image-home.png" alt="{{cs_product.name | escape}}">
+        {% endif %}
+      </a>
+      <div class="caption">
+        <div class="brand-name trsn">
+          {% if cs_product.brand != blank and options.show_brand %}<small class="brand">{{ cs_product.brand}}</small>{% endif %}
+          <h4><a href="{{cs_product.url}}" class="d-block">{{ cs_product.name | truncate:35, ".." }}</a></h4>
+          {% if cs_product.variant != blank %}
+          {% for variant_value in cs_product.variant.values %}
+          <small class="d-block text-muted">
+            {{variant_value.option.name}}: {{variant_value.name }}
+          </small>
+          {% endfor %}
+          {% endif %}
+        </div>
+        {% if options.hide_price != true %}
+        <div class="list-price">
+          {% if cs_product.discount > 0 %}
+          {% if cs_product.variant != blank %}
+          <span class="product-block-normal">{{ cs_product.variant.price | minus:cs_product.discount | price }}</span>
+          <span class="product-block-discount text-muted">{{ cs_product.variant.price | price }}</span>
+          {% else %}
+          <span class="product-block-normal">{{ cs_product.price | minus:cs_product.discount | price }}</span>
+          <span class="product-block-discount text-muted">{{ cs_product.price | price }}</span>
+          {% endif %}
+          {% else %}
+          {% if cs_product.variant != blank %}
+          <span class="product-block-list">{{cs_product.variant.price | price }}</span>
+          {% else %}
+          <span class="product-block-list">{{ cs_product.price | price }}</span>
+          {% endif %}
+          {% endif %}
+        </div>
+        {% endif %}
+        <form id="product-form-{{cs_product.id}}" action="{% if cs_product.variant != blank %}{{cs_product.variant.add_to_cart_url}}{% else %}{{cs_product.add_to_cart_url}}{% endif %}" method="post" enctype="multipart/form-data" name="buy" class="mt-2">
+          <div class="adc-form">
+            <button type="submit" class="adc btn btn-adc w-100" value="{% t 'Add to Cart' %}"><i class="fas fa-cart-plus"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endunless %}

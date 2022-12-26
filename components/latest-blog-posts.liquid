@@ -1,0 +1,28 @@
+{% if pages.categories.category["Post"] != blank %}
+<div id="latest-posts-{{component.id}}" class="container">
+  {% if component.options.title != blank %}
+  <div class="col-12">
+    <h2 class="block-header text-center">{{component.options.title}}</h2>
+  </div>
+  {% endif %}
+  <div class="blog_list row mb-md-5 mb-4 mx-n2 no-gutters justify-content-center">
+    {% assign limit = component.options.limit | plus: 0 %}
+    {% for page in pages.categories.category["Post"].pages reversed %}
+    {% if forloop.index > limit %} {% break %} {% endif %}
+    <div class="col-md-4 mb-4 px-2 text-center">
+      <a href="{{ page.url }}" title="{{ page.title }}" class="mb-md-0 mb-4 d-block">
+        {% if page.images == empty %}
+        <img class="img-fluid" src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-360x240.png" alt="{{ page.title }}">
+        {% else %}
+        <img class="img-fluid" src="{{page.images.first | resize: '360x240'}}" srcset="{{page.images.first | resize: '360x240'}} 1x,{{page.images.first | resize: '720x480'}} 2x" alt="{{page.title}}" />
+        {% endif %}
+        <h5 class="p-2 m-0">{{ page.title }}</h5>
+      </a>
+    </div>
+    {% endfor %}
+    <div class="col-12 text-center px-2">
+      <a href="{{store.url}}/blog" title="Blog" class="btn btn-primary mt-5">{% t 'Go to Blog' %}</a>
+    </div>
+  </div>
+</div>
+{% endif %}

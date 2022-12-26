@@ -1,0 +1,14 @@
+{
+  "name": "Instagram Feed",
+  "identifier": "",
+  "icon": "image",
+  "line": 9,
+  "column": 1,
+  "visibility": true,
+  "options": {
+    "title": "Instagram",
+    "limit": 6
+  },
+  "theme_block": "home",
+  "theme_block_template": "Default"
+}

@@ -1,0 +1,89 @@
+{% capture product_rating %}
+
+  {% if options.pp_reviews %}
+    <div class="d-flex justify-content-center product-list-rating-container">
+      {% if product.reviews.count > 0 %}
+        {% render 'product_rating', product: product %}
+      <div class="pl-2">({{ product.reviews.count }})</div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+<div class="product-block text-center {% if options.product_block_2_columns %}mb-md-3 mb-2{% else %}mb-3{% endif %} p-md-3 p-2 rounded trsn">
+  <a href="{{product.url}}" class="product-image d-block {% if product.stock == 0 and product.stock_unlimited == false  %}not-available{% elsif product.status == 'not-available'%}not-available{% endif %}">
+
+    {% if options.show_add_to_cart != true or options.disable_shopping_cart %}
+    {% if product.stock == 0 and product.stock_unlimited == false %}
+    <span class="badge badge-secondary status-tag">{% t "Sold out" %}</span>
+    {% elsif product.status == 'not-available' %}
+    <span class="badge badge-secondary status-tag">{% t "Not Available" %}</span>
+    {% endif %}
+    {% endif %}
+
+    {% if product.discount > 0 %}
+    <span class="badge status-tag sale">{{options.sale_tag_text}} -{{ product.discount | divided_by:product.price | times:100 | round:0 }}&percnt;</span>
+    {% endif %}
+
+    {% if product.images != empty %}
+    <img class="img-fluid img-portfolio img-hover mb-2" src="{{product.images.first | resize: '255x255'}}" srcset="{{product.images.first | resize: '255x255'}} 1x,{{product.images.first | resize: '510x510'}} 2x" alt="{{product.name | escape}}" />
+    {% else %}
+    <img class="img-fluid img-portfolio img-hover mb-2" src="//assets.jumpseller.com/public/placeholder/themes/simple/no-image-home.png" alt="{{product.name | escape}}">
+    {% endif %}
+  </a>
+  {% assign variant_prices = product.variants | sort: 'price' | map: 'price' %}
+  {% assign min_price = variant_prices | first | price %}
+  {% assign max_price = variant_prices | last | price %}
+  <div class="caption">
+    <div class="brand-name small trsn">
+      {% if product.brand != blank and options.show_brand %}<span class="brand">{{ product.brand}}</span>{% endif %}
+      <h4><a href="{{product.url}}">{{ product.name | truncate:35, ".." }}</a></h4>
+    </div>
+    
+    {{ product_rating }}
+
+    {% if options.hide_price != true %}
+    <div class="list-price">
+      {% if product.discount > 0 %}
+      {% if product.variants != empty and options.from-prices and min_price != max_price %}<span class="from_price">{% t "From" %} </span>{% endif %}<span class="product-block-normal">{{ product.price | minus:product.discount | price }}</span> <span class="product-block-discount text-muted">{{ product.price | price }}</span>
+      {% else %}
+      {% if product.variants != empty and options.from-prices and min_price != max_price %}<span class="from_price">{% t "From" %} </span>{% endif %}<span class="product-block-list">{{ product.price | price }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if options.show_add_to_cart and options.disable_shopping_cart != true %}
+    <div class="mt-2 trsn btn_container">
+      {% if product.stock == 0 and product.stock_unlimited == false %}
+      <a class="btn btn-outline-dark btn-block disabled" href="{{product.url}}">{% t "Sold out" %}</a>
+      {% elsif product.status == 'not-available' %}
+      <a class="btn btn-outline-dark btn-block disabled" href="{{product.url}}">{% t "Not Available" %}</a>
+      {% else %}
+      {% if product.options != empty %}
+      <a class="btn btn-primary btn-block" href="{{product.url}}">{% t "View Options" %}</a>
+      {% else %}
+      <form id="product-form-{{product.id}}-{{component.id}}" action="{{product.add_to_cart_url}}" method="post" enctype="multipart/form-data" name="buy">
+        <div class="row adc-form no-gutters product-stock product-available">
+          <div class="{% if options.product_block_2_columns %}col-sm-8{% else %}col-8{% endif %}">
+            {% capture maxStock  %} max="{{ product.stock }}" {% endcapture  %}
+            <div class="quantity {% if options.product_block_2_columns %}mr-md-2 mb-md-0 mb-2{% else %}mr-2{% endif %}">
+              <div class="product-qty">
+                <input type="number" class="qty form-control text-center" id="input-qty-{{product.id}}-{{component.id}}" name="qty" min="1" value="1" readonly="readonly" {% if product.stock_unlimited != true %}{{maxStock}}{% endif %}>
+                <div class="quantity-nav"><div class="quantity-button quantity-up" onclick="Jumpseller.incrementCounter('input-qty-{{product.id}}-{{component.id}}')">+</div><div class="quantity-button quantity-down" onclick="Jumpseller.decrementCounter('input-qty-{{product.id}}-{{component.id}}')">-</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="{% if options.product_block_2_columns %}col-sm-4{% else %}col-4{% endif %}">
+            {% if options.display_cart_notification %}
+            <button type="button" onclick="addToCart('{{product.id}}', '{{product.name | replace: "'", "" | escape }}', $('#input-qty-{{product.id}}-{{component.id}}').val(), getProductOptions('#product-form-{{product.id}}-{{component.id}}'));" class="btn btn-adc btn-block" value="{% t 'Add to Cart' %}" ><i class="fas fa-cart-plus"></i></button>
+            {% else %}
+            <button type="submit" class="btn btn-adc btn-block" value="{% t 'Add to Cart' %}" ><i class="fas fa-cart-plus"></i></button>
+            {% endif %}
+          </div>
+        </div>
+      </form>
+      {% endif %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</div>

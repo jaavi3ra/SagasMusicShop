@@ -1,0 +1,14 @@
+{
+  "name": "Custom Code",
+  "identifier": "",
+  "icon": "code",
+  "line": 11,
+  "column": 1,
+  "visibility": true,
+  "options": {
+    "custom_code": "",
+    "custom_code_size": "Container"
+  },
+  "theme_block": "home",
+  "theme_block_template": "Default"
+}

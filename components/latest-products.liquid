@@ -1,0 +1,18 @@
+<div id="latest-products-{{component.id}}" class="container">
+  {% if component.options.title != blank %}
+  <div class="col-12">
+    <h2 class="block-header text-center">{{component.options.title}}</h2>
+  </div>
+  {% endif %}
+  <div class="row mb-md-5 mb-4 mx-md-n2 {% if options.product_block_2_columns %}mx-n1{% endif %} no-gutters">
+    {% if products.all == blank %}
+    {% include 'list_product_placeholder' %}
+    {% else %}
+    {% for product in products.latest limit:component.options.limit %}
+    <div class="col-lg-3 {% if options.product_block_2_columns %}col-6 px-md-2 px-1{% else %}col-sm-6 px-2{% endif %}">
+      {% include 'list_product' with product %}
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>

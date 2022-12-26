@@ -1,0 +1,9 @@
+<div id="big-banner-{{component.id}}" class="{% if component.options.size == 'Container'%}container{% endif %} mb-5">
+  {% if component.options.link != blank %}
+  <a href="{{component.options.link}}" class="d-block">
+    <img src="{{component.options.image}}" class="w-100" alt="{{store.name}}"/>
+  </a>
+  {% else %}
+  <img src="{{component.options.image}}" class="w-100" alt="{{store.name}}"/>
+  {% endif %}
+</div>

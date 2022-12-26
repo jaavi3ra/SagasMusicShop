@@ -1,0 +1,43 @@
+{
+  "name": "Latest Products",
+  "icon": "star",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "title": {
+      "name": "Title",
+      "type": "input",
+      "help": "",
+      "default": "New Arrivals"
+    },
+    "limit": {
+      "name": "Quantity of products to display",
+      "type": "select",
+      "help": "",
+      "default": "8",
+      "options": [
+        {
+          "4": "4"
+        },
+        {
+          "8": "8"
+        },
+        {
+          "12": "12"
+        },
+        {
+          "16": "16"
+        },
+        {
+          "20": "20"
+        },
+        {
+          "24": "24"
+        }
+      ]
+    }
+  }
+}

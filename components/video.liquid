@@ -1,0 +1,13 @@
+<div id="video-{{component.id}}" class="video_component container mb-5">
+  <div class="{{component.options.video_desktop_alignment}}" style="width:{{component.options.video_desktop_size}}">
+    <figure>
+      {{component.options.video}}
+    </figure>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .video_component > div {width: 100%!important;}
+  }
+</style>

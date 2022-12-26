@@ -1,0 +1,54 @@
+{
+  "name": "Video",
+  "icon": "video",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "video": {
+      "name": "Embed Video Code",
+      "type": "text",
+      "help": "Copy and paste iframe from Youtube, Vimeo or another Platform.",
+      "default": ""
+    },
+    "video_desktop_size": {
+      "name": "Desktop Size",
+      "type": "select",
+      "help": "",
+      "default": "800px",
+      "options": [
+        {
+          "600px": "600px"
+        },
+        {
+          "700px": "700px"
+        },
+        {
+          "800px": "800px"
+        },
+        {
+          "Full size": "100%"
+        }
+      ]
+    },
+    "video_desktop_alignment": {
+      "name": "Alignment",
+      "type": "select",
+      "help": "",
+      "default": "m-auto",
+      "options": [
+        {
+          "Left": "mr-auto"
+        },
+        {
+          "Center": "m-auto"
+        },
+        {
+          "Right": "ml-auto"
+        }
+      ]
+    }
+  }
+}

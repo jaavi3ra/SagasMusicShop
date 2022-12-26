@@ -1,0 +1,806 @@
+msgid "General"
+msgstr "General"
+
+msgid "Información de la tienda"
+msgstr "Información de la tienda"
+
+msgid "Cabecera"
+msgstr "Cabecera"
+
+msgid "Bloque de Producto"
+msgstr "Bloque de Producto"
+
+msgid "Página del Producto"
+msgstr "Página del Producto"
+
+msgid "Colores"
+msgstr "Colores"
+
+msgid "Fuentes"
+msgstr "Fuentes"
+
+msgid "Redes sociales"
+msgstr "Redes sociales"
+
+msgid "WhatsApp de la tienda"
+msgstr "WhatsApp de la tienda"
+
+msgid "Pie de Página"
+msgstr "Pie de Página"
+
+msgid "Métodos de pago para mostrar"
+msgstr "Métodos de pago para mostrar"
+
+msgid "Notificación de Agregar al Carro"
+msgstr "Notificación de Agregar al Carro"
+
+msgid "Otras Opciones"
+msgstr "Otras Opciones"
+
+msgid "Tabla de productos en la página de éxito"
+msgstr "Tabla de productos en la página de éxito"
+
+msgid "Mostrar productos destacados cuando no hay resultados de búsqueda"
+msgstr "Mostrar productos destacados cuando no hay resultados de búsqueda"
+
+msgid "Productos por Página en Categorías"
+msgstr "Productos por Página en Categorías"
+
+msgid "Productos por Página en el Resultado de Búsqueda"
+msgstr "Productos por Página en el Resultado de Búsqueda"
+
+msgid "Publicaciones de blog por página"
+msgstr "Publicaciones de blog por página"
+
+msgid "Mostrar Email de Contacto"
+msgstr "Mostrar Email de Contacto"
+
+msgid "Teléfono de contacto"
+msgstr "Teléfono de contacto"
+
+msgid "Mostrar encabezado al ancho total"
+msgstr "Mostrar encabezado al ancho total"
+
+msgid "Encabezado Fijo"
+msgstr "Encabezado Fijo"
+
+msgid "Tamaño de los íconos del Encabezado"
+msgstr "Tamaño de los íconos del Encabezado"
+
+msgid "Color de Fondo del Encabezado"
+msgstr "Color de Fondo del Encabezado"
+
+msgid "Color del Texto de la Cabecera"
+msgstr "Color del Texto de la Cabecera"
+
+msgid "Mostrar el Menu Principal Vertical"
+msgstr "Mostrar el Menu Principal Vertical"
+
+msgid "Alineación del Menú Principal"
+msgstr "Alineación del Menú Principal"
+
+msgid "Color de Fondo del Menú"
+msgstr "Color de Fondo del Menú"
+
+msgid "Color de Texto del Menú"
+msgstr "Color de Texto del Menú"
+
+msgid "Color de Fondo del Menú al pasar el Mouse"
+msgstr "Color de Fondo del Menú al pasar el Mouse"
+
+msgid "Mostrar la Barra Superior"
+msgstr "Mostrar la Barra Superior"
+
+msgid "Texto de la Barra Superior"
+msgstr "Texto de la Barra Superior"
+
+msgid "Color de Fondo de la Barra Superior"
+msgstr "Color de Fondo de la Barra Superior"
+
+msgid "Color del Texto de la Barra Superior"
+msgstr "Color del Texto de la Barra Superior"
+
+msgid "Marca del producto en los listados"
+msgstr "Marca del producto en los listados"
+
+msgid "Mostrar Botón de Agregar al Carro"
+msgstr "Mostrar Botón de Agregar al Carro"
+
+msgid "Mostrar dos columnas en la versión móvil"
+msgstr "Mostrar dos columnas en la versión móvil"
+
+msgid "Mostrar 'desde' en Precios de Productos con Variantes"
+msgstr "Mostrar 'desde' en Precios de Productos con Variantes"
+
+msgid "Imagen en escala de grises en productos no disponibles"
+msgstr "Imagen en escala de grises en productos no disponibles"
+
+msgid "Mostrar sombra en la caja al pasar el mouse"
+msgstr "Mostrar sombra en la caja al pasar el mouse"
+
+msgid "Color de la etiqueta de promociones"
+msgstr "Color de la etiqueta de promociones"
+
+msgid "Texto de Promociones"
+msgstr "Texto de Promociones"
+
+msgid "Mostrar Stock del Producto"
+msgstr "Mostrar Stock del Producto"
+
+msgid "Mostrar SKU del Producto"
+msgstr "Mostrar SKU del Producto"
+
+msgid "Mostrar Productos Relacionados"
+msgstr "Mostrar Productos Relacionados"
+
+msgid "Mostrar Etiqueta 'Sin Stock'"
+msgstr "Mostrar Etiqueta 'Sin Stock'"
+
+msgid "Cantidad Máxima de Productos Relacionados"
+msgstr "Cantidad Máxima de Productos Relacionados"
+
+msgid "Mostrar Packs Frecuentemente Comprados Juntos"
+msgstr "Mostrar Packs Frecuentemente Comprados Juntos"
+
+msgid "Número de Packs Frecuentemente Comprados Juntos a Mostrar"
+msgstr "Número de Packs Frecuentemente Comprados Juntos a Mostrar"
+
+msgid "Mostrar reseñas de productos"
+msgstr "Mostrar reseñas de productos"
+
+msgid "Número de reseñas"
+msgstr "Número de reseñas"
+
+msgid "Color primario"
+msgstr "Color primario"
+
+msgid "Fondo de la Tienda"
+msgstr "Fondo de la Tienda"
+
+msgid "Color de Texto de la Tienda"
+msgstr "Color de Texto de la Tienda"
+
+msgid "Color botón primario"
+msgstr "Color botón primario"
+
+msgid "Color al pasar el mouse botón primario"
+msgstr "Color al pasar el mouse botón primario"
+
+msgid "Color botón secundario"
+msgstr "Color botón secundario"
+
+msgid "Color del botón de agregar al carro"
+msgstr "Color del botón de agregar al carro"
+
+msgid "Color de los links"
+msgstr "Color de los links"
+
+msgid "Color de los links al pasar el mouse"
+msgstr "Color de los links al pasar el mouse"
+
+msgid "Color del Footer"
+msgstr "Color del Footer"
+
+msgid "Color del Texto del Footer"
+msgstr "Color del Texto del Footer"
+
+msgid "Títulos"
+msgstr "Títulos"
+
+msgid "Nombre de la tienda"
+msgstr "Nombre de la tienda"
+
+msgid "Tamaño de fuente general"
+msgstr "Tamaño de fuente general"
+
+msgid "Tamaño de letra del título"
+msgstr "Tamaño de letra del título"
+
+msgid "Tamaño de Títulos de los Bloques"
+msgstr "Tamaño de Títulos de los Bloques"
+
+msgid "Tamaño de la fuente en el Nombre de la tienda"
+msgstr "Tamaño de la fuente en el Nombre de la tienda"
+
+msgid "Tamaño de fuente del menú"
+msgstr "Tamaño de fuente del menú"
+
+msgid "Botón de Facebook en productos"
+msgstr "Botón de Facebook en productos"
+
+msgid "Botón de Twitter en productos"
+msgstr "Botón de Twitter en productos"
+
+msgid "Botón de Pinterest en productos"
+msgstr "Botón de Pinterest en productos"
+
+msgid "Botón Tumblr en productos"
+msgstr "Botón Tumblr en productos"
+
+msgid "Botón de WhatsApp en productos en dispositivos móviles"
+msgstr "Botón de WhatsApp en productos en dispositivos móviles"
+
+msgid "Activar Botón de WhatsApp"
+msgstr "Activar Botón de WhatsApp"
+
+msgid "Posición del botón WhatsApp"
+msgstr "Posición del botón WhatsApp"
+
+msgid "Botón WhatsApp > Color de fondo"
+msgstr "Botón WhatsApp > Color de fondo"
+
+msgid "Botón WhatsApp > Color de fondo (Al pasar el mouse)"
+msgstr "Botón WhatsApp > Color de fondo (Al pasar el mouse)"
+
+msgid "Botón WhatsApp > Color del ícono"
+msgstr "Botón WhatsApp > Color del ícono"
+
+msgid "Logo del pie de página"
+msgstr "Logo del pie de página"
+
+msgid "Descripción corta de la tienda"
+msgstr "Descripción corta de la tienda"
+
+msgid "Mostrar descripción"
+msgstr "Mostrar descripción"
+
+msgid "Mostrar Formulario de Suscripción"
+msgstr "Mostrar Formulario de Suscripción"
+
+msgid "Url de Newsletter de Mailchimp"
+msgstr "Url de Newsletter de Mailchimp"
+
+msgid "Descripción del Newsletter"
+msgstr "Descripción del Newsletter"
+
+msgid "Mostrar pago con Webpay"
+msgstr "Mostrar pago con Webpay"
+
+msgid "Mostrar pago con Chek"
+msgstr "Mostrar pago con Chek"
+
+msgid "Mostrar pago con Khipu"
+msgstr "Mostrar pago con Khipu"
+
+msgid "Mostrar pago con Servipag"
+msgstr "Mostrar pago con Servipag"
+
+msgid "Mostrar pago con Mach"
+msgstr "Mostrar pago con Mach"
+
+msgid "Mostrar pago con Flow"
+msgstr "Mostrar pago con Flow"
+
+msgid "Mostrar pago con Payzen"
+msgstr "Mostrar pago con Payzen"
+
+msgid "Mostrar pago con Caja Vecina"
+msgstr "Mostrar pago con Caja Vecina"
+
+msgid "Mostrar pago con Multicaja"
+msgstr "Mostrar pago con Multicaja"
+
+msgid "Mostrar pago con PSE "
+msgstr "Mostrar pago con PSE "
+
+msgid "Mostrar pago con Baloto"
+msgstr "Mostrar pago con Baloto"
+
+msgid "Mostrar pago con ePayco"
+msgstr "Mostrar pago con ePayco"
+
+msgid "Mostrar pago con Efecty"
+msgstr "Mostrar pago con Efecty"
+
+msgid "Mostrar pago con Oxxo"
+msgstr "Mostrar pago con Oxxo"
+
+msgid "Mostrar pago con Mercadopago"
+msgstr "Mostrar pago con Mercadopago"
+
+msgid "Mostrar pago con Multibanco"
+msgstr "Mostrar pago con Multibanco"
+
+msgid "Mostrar pago con MBWay"
+msgstr "Mostrar pago con MBWay"
+
+msgid "Mostrar pago con PayU"
+msgstr "Mostrar pago con PayU"
+
+msgid "Mostrar pago con iDEAL"
+msgstr "Mostrar pago con iDEAL"
+
+msgid "Mostrar pago con Skrill"
+msgstr "Mostrar pago con Skrill"
+
+msgid "Mostrar pago con Stripe"
+msgstr "Mostrar pago con Stripe"
+
+msgid "Mostrar pago con Apple Pay"
+msgstr "Mostrar pago con Apple Pay"
+
+msgid "Mostrar pago con Bitcoin"
+msgstr "Mostrar pago con Bitcoin"
+
+msgid "Mostrar pago con Visa"
+msgstr "Mostrar pago con Visa"
+
+msgid "Mostrar pago con MasterCard"
+msgstr "Mostrar pago con MasterCard"
+
+msgid "Mostrar pago con American Express"
+msgstr "Mostrar pago con American Express"
+
+msgid "Mostrar pago con Paypal"
+msgstr "Mostrar pago con Paypal"
+
+msgid "Mostrar pago con Diners Club"
+msgstr "Mostrar pago con Diners Club"
+
+msgid "Mostrar pago con Transferencia Bancaria"
+msgstr "Mostrar pago con Transferencia Bancaria"
+
+msgid "Mostrar Pago Manual"
+msgstr "Mostrar Pago Manual"
+
+msgid "Color de la Notificación"
+msgstr "Color de la Notificación"
+
+msgid "Mensaje para clientes nuevos"
+msgstr "Mensaje para clientes nuevos"
+
+msgid "Título del widget del blog"
+msgstr "Título del widget del blog"
+
+msgid "Texto del Widget del blog"
+msgstr "Texto del Widget del blog"
+
+msgid "Deshabilitar Carro de Compras"
+msgstr "Deshabilitar Carro de Compras"
+
+msgid "Ocultar Precios"
+msgstr "Ocultar Precios"
+
+msgid "Insertar código al final de <head>"
+msgstr "Insertar código al final de <head>"
+
+msgid "Insertar código al final de <body>"
+msgstr "Insertar código al final de <body>"
+
+msgid "Si esta habilitado, las variantes sin stock se identificarán visualmente."
+msgstr "Si esta habilitado, las variantes sin stock se identificarán visualmente."
+
+msgid "Si está habilitado, se mostrará una sección en la página del producto, que muestra la revisión del cliente proporcionada por otros clientes."
+msgstr "Si está habilitado, se mostrará una sección en la página del producto, que muestra la revisión del cliente proporcionada por otros clientes."
+
+msgid "Establece el número de reseñas que se mostrarán inicialmente con cada producto."
+msgstr "Establece el número de reseñas que se mostrarán inicialmente con cada producto."
+
+msgid "Habilita un botón de WhatsApp que sigue (se desplaza con el contenido) a los clientes en la tienda. Recomendamos no habilitar esta función si va a utilizar un complemento o una integración que también muestre un botón."
+msgstr "Habilita un botón de WhatsApp que sigue (se desplaza con el contenido) a los clientes en la tienda. Recomendamos no habilitar esta función si va a utilizar un complemento o una integración que también muestre un botón."
+
+msgid "Selecciona la posición en la que se mostrará el botón WhatsApp. Siempre estará en uno de los rincones de la tienda."
+msgstr "Selecciona la posición en la que se mostrará el botón WhatsApp. Siempre estará en uno de los rincones de la tienda."
+
+msgid "Ajustar el tamaño de las imágenes"
+msgstr "Ajustar el tamaño de las imágenes"
+
+msgid "Imagen de Banner 1 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 1 (Sugerido: 360x360)"
+
+msgid "Título de Banner 1"
+msgstr "Título de Banner 1"
+
+msgid "Link de Banner 1"
+msgstr "Link de Banner 1"
+
+msgid "Imagen de Banner 2 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 2 (Sugerido: 360x360)"
+
+msgid "Título de Banner 2"
+msgstr "Título de Banner 2"
+
+msgid "Link de Banner 2"
+msgstr "Link de Banner 2"
+
+msgid "Imagen de Banner 3 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 3 (Sugerido: 360x360)"
+
+msgid "Título de Banner 3"
+msgstr "Título de Banner 3"
+
+msgid "Link de Banner 3"
+msgstr "Link de Banner 3"
+
+msgid "Imagen de Banner 4 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 4 (Sugerido: 360x360)"
+
+msgid "Título de Banner 4"
+msgstr "Título de Banner 4"
+
+msgid "Link de Banner 4"
+msgstr "Link de Banner 4"
+
+msgid "Imagen de Banner 5 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 5 (Sugerido: 360x360)"
+
+msgid "Título de Banner 5"
+msgstr "Título de Banner 5"
+
+msgid "Link de Banner 5"
+msgstr "Link de Banner 5"
+
+msgid "Imagen de Banner 6 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 6 (Sugerido: 360x360)"
+
+msgid "Título de Banner 6"
+msgstr "Título de Banner 6"
+
+msgid "Link de Banner 6"
+msgstr "Link de Banner 6"
+
+msgid "Imagen de Banner 7 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 7 (Sugerido: 360x360)"
+
+msgid "Título de Banner 7"
+msgstr "Título de Banner 7"
+
+msgid "Link de Banner 7"
+msgstr "Link de Banner 7"
+
+msgid "Imagen de Banner 8 (Sugerido: 360x360)"
+msgstr "Imagen de Banner 8 (Sugerido: 360x360)"
+
+msgid "Título de Banner 8"
+msgstr "Título de Banner 8"
+
+msgid "Link de Banner 8"
+msgstr "Link de Banner 8"
+
+msgid "Imagen"
+msgstr "Imagen"
+
+msgid "Enlace"
+msgstr "Enlace"
+
+msgid "Tamaño"
+msgstr "Tamaño"
+
+msgid "Código Personalizado"
+msgstr "Código Personalizado"
+
+msgid "Úsalo para aplicaciones externas o código personalizado"
+msgstr "Úsalo para aplicaciones externas o código personalizado"
+
+msgid "Categoría Destacada"
+msgstr "Categoría Destacada"
+
+msgid "Mostrar botón Ver Todo"
+msgstr "Mostrar botón Ver Todo"
+
+msgid "Cantidad de productos para mostrar"
+msgstr "Cantidad de productos para mostrar"
+
+msgid "Título"
+msgstr "Título"
+
+msgid "Alineación de Imagen"
+msgstr "Alineación de Imagen"
+
+msgid "Texto"
+msgstr "Texto"
+
+msgid "Etiqueta del botón"
+msgstr "Etiqueta del botón"
+
+msgid "Link del botón"
+msgstr "Link del botón"
+
+msgid "Activar Slider Responsivo"
+msgstr "Activar Slider Responsivo"
+
+msgid "Activar Loop"
+msgstr "Activar Loop"
+
+msgid "Activar Reproducción Automática"
+msgstr "Activar Reproducción Automática"
+
+msgid "Tiempo de Espera de Reproducción Automática"
+msgstr "Tiempo de Espera de Reproducción Automática"
+
+msgid "Porcentaje de Opacidad del Slider"
+msgstr "Porcentaje de Opacidad del Slider"
+
+msgid "Tamaño de los Títulos del Slider"
+msgstr "Tamaño de los Títulos del Slider"
+
+msgid "Activar Pausa al Pasar el Mouse"
+msgstr "Activar Pausa al Pasar el Mouse"
+
+msgid "Color de Opacidad de Fondo del Slider"
+msgstr "Color de Opacidad de Fondo del Slider"
+
+msgid "Imagen Slide 1 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 1 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 1"
+msgstr "Alineación del Slider 1"
+
+msgid "Slide 1 Título"
+msgstr "Slide 1 Título"
+
+msgid "Color del Título del Slider 1"
+msgstr "Color del Título del Slider 1"
+
+msgid "Mostrar botón en la versión móvil"
+msgstr "Mostrar botón en la versión móvil"
+
+msgid "Link del Slide 1"
+msgstr "Link del Slide 1"
+
+msgid "Slide 1 Texto del botón"
+msgstr "Slide 1 Texto del botón"
+
+msgid "Color del Botón del Slider 1"
+msgstr "Color del Botón del Slider 1"
+
+msgid "Imagen Slide 2 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 2 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 2"
+msgstr "Alineación del Slider 2"
+
+msgid "Slide 2 Título"
+msgstr "Slide 2 Título"
+
+msgid "Color del Título del Slider 2"
+msgstr "Color del Título del Slider 2"
+
+msgid "Link del Slide 2"
+msgstr "Link del Slide 2"
+
+msgid "Slide 2 Texto del botón"
+msgstr "Slide 2 Texto del botón"
+
+msgid "Color del Botón del Slider 2"
+msgstr "Color del Botón del Slider 2"
+
+msgid "Imagen Slide 3 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 3 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 3"
+msgstr "Alineación del Slider 3"
+
+msgid "Slide 3 Título"
+msgstr "Slide 3 Título"
+
+msgid "Color del Título del Slider 3"
+msgstr "Color del Título del Slider 3"
+
+msgid "Link del Slide 3"
+msgstr "Link del Slide 3"
+
+msgid "Slide 3 Texto del botón"
+msgstr "Slide 3 Texto del botón"
+
+msgid "Color del Botón del Slider 3"
+msgstr "Color del Botón del Slider 3"
+
+msgid "Imagen Slide 4 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 4 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 4"
+msgstr "Alineación del Slider 4"
+
+msgid "Slide 4 Título"
+msgstr "Slide 4 Título"
+
+msgid "Color del Título del Slider 4"
+msgstr "Color del Título del Slider 4"
+
+msgid "Link del Slide 4"
+msgstr "Link del Slide 4"
+
+msgid "Slide 4 Texto del botón"
+msgstr "Slide 4 Texto del botón"
+
+msgid "Color del Botón del Slider 4"
+msgstr "Color del Botón del Slider 4"
+
+msgid "Imagen Slide 5 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 5 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 5"
+msgstr "Alineación del Slider 5"
+
+msgid "Slide 5 Título"
+msgstr "Slide 5 Título"
+
+msgid "Color del Título del Slider 5"
+msgstr "Color del Título del Slider 5"
+
+msgid "Link del Slide 5"
+msgstr "Link del Slide 5"
+
+msgid "Slide 5 Texto del botón"
+msgstr "Slide 5 Texto del botón"
+
+msgid "Color del Botón del Slider 5"
+msgstr "Color del Botón del Slider 5"
+
+msgid "Imagen Slide 6 (Sugerido: 1905x800)"
+msgstr "Imagen Slide 6 (Sugerido: 1905x800)"
+
+msgid "Alineación del Slider 6"
+msgstr "Alineación del Slider 6"
+
+msgid "Slide 6 Título"
+msgstr "Slide 6 Título"
+
+msgid "Color del Título del Slider 6"
+msgstr "Color del Título del Slider 6"
+
+msgid "Link del Slide 6"
+msgstr "Link del Slide 6"
+
+msgid "Slide 6 Texto del botón"
+msgstr "Slide 6 Texto del botón"
+
+msgid "Color del Botón del Slider 6"
+msgstr "Color del Botón del Slider 6"
+
+msgid "Texto de Testimonio 1"
+msgstr "Texto de Testimonio 1"
+
+msgid "Autor de Testimonio 1"
+msgstr "Autor de Testimonio 1"
+
+msgid "Imagen de Autor 1 (Sugerido: 50x50)"
+msgstr "Imagen de Autor 1 (Sugerido: 50x50)"
+
+msgid "Texto de Testimonio 2"
+msgstr "Texto de Testimonio 2"
+
+msgid "Autor de Testimonio 2"
+msgstr "Autor de Testimonio 2"
+
+msgid "Imagen de Autor 2 (Sugerido: 50x50)"
+msgstr "Imagen de Autor 2 (Sugerido: 50x50)"
+
+msgid "Texto de Testimonio 3"
+msgstr "Texto de Testimonio 3"
+
+msgid "Autor de Testimonio 3"
+msgstr "Autor de Testimonio 3"
+
+msgid "Imagen de Autor 3 (Sugerido: 50x50)"
+msgstr "Imagen de Autor 3 (Sugerido: 50x50)"
+
+msgid "Texto de Testimonio 4"
+msgstr "Texto de Testimonio 4"
+
+msgid "Autor de Testimonio 4"
+msgstr "Autor de Testimonio 4"
+
+msgid "Imagen de Autor 4 (Sugerido: 50x50)"
+msgstr "Imagen de Autor 4 (Sugerido: 50x50)"
+
+msgid "Texto de Testimonio 5"
+msgstr "Texto de Testimonio 5"
+
+msgid "Autor de Testimonio 5"
+msgstr "Autor de Testimonio 5"
+
+msgid "Imagen de Autor 5 (Sugerido: 50x50)"
+msgstr "Imagen de Autor 5 (Sugerido: 50x50)"
+
+msgid "Código del video"
+msgstr "Código del video"
+
+msgid "Copie y pegue el iframe de Youtube, Vimeo u otra plataforma"
+msgstr "Copie y pegue el iframe de Youtube, Vimeo u otra plataforma"
+
+msgid "Tamaño en versión Escritorio"
+msgstr "Tamaño en versión Escritorio"
+
+msgid "Alineamiento"
+msgstr "Alineamiento"
+
+msgid "Banners"
+msgstr "Banners"
+
+msgid "Big Banner"
+msgstr "Banner Grande"
+
+msgid "Banner Grande"
+msgstr "Banner Grande"
+
+msgid "Custom Code"
+msgstr "Código Personalizado"
+
+msgid "Featured Category"
+msgstr "Categoría Destacada"
+
+msgid "Featured Products"
+msgstr "Productos Destacados"
+
+msgid "Productos Destacados"
+msgstr "Productos Destacados"
+
+msgid "Image with Text"
+msgstr "Imagen con Texto"
+
+msgid "Imagen con Texto"
+msgstr "Imagen con Texto"
+
+msgid "Instagram Feed"
+msgstr "Feed de Instagram"
+
+msgid "Feed de Instagram"
+msgstr "Feed de Instagram"
+
+msgid "Latest Blog Posts"
+msgstr "Últimas Publicaciones del Blog"
+
+msgid "Últimas Publicaciones del Blog"
+msgstr "Últimas Publicaciones del Blog"
+
+msgid "Latest Products"
+msgstr "Últimos Productos"
+
+msgid "Últimos Productos"
+msgstr "Últimos Productos"
+
+msgid "Slider"
+msgstr "Slider"
+
+msgid "Testimonials"
+msgstr "Testimonios"
+
+msgid "Testimonios"
+msgstr "Testimonios"
+
+msgid "Text Block"
+msgstr "Bloque de Texto"
+
+msgid "Bloque de Texto"
+msgstr "Bloque de Texto"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Store Info"
+msgstr "Información de la tienda"
+
+msgid "Header"
+msgstr "Cabecera"
+
+msgid "Product Block"
+msgstr "Bloque de Producto"
+
+msgid "Product Page"
+msgstr "Página del Producto"
+
+msgid "Colors"
+msgstr "Colores"
+
+msgid "Fonts"
+msgstr "Fuentes"
+
+msgid "Social Networks"
+msgstr "Redes sociales"
+
+msgid "Store WhatsApp"
+msgstr "WhatsApp de la tienda"
+
+msgid "Footer"
+msgstr "Pie de Página"
+
+msgid "Payment methods to show"
+msgstr "Métodos de pago para mostrar"
+
+msgid "Add to Cart Notification"
+msgstr "Notificación de Agregar al Carro"
+
+msgid "Other Options"
+msgstr "Otras Opciones"

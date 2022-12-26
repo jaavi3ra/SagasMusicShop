@@ -1,0 +1,48 @@
+<div class="container blog blog-post mt-lg-0 my-5">
+  <div class="row">
+    <div class="col-md-8 page">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="page-header">{{page.title}}</h1>
+        </div>
+        <div class="col-12 text-center mb-3">{{page.date | date: "%d | %m | %Y"}}</div>
+      </div>
+      {% if page.images == empty %}
+      <img class="img-fluid" src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-730x400.png" alt="{{ page.title }}">
+      {% else %}
+      <img class="img-fluid" src="{{ page.images.first }}" alt="{{ page.title }}"/>
+      {% endif %}
+      <div class="page-body">{{page.body}}</div>
+    </div>
+
+    <div class="col-md-4 mt-5">
+      <div class="mb-4">
+        <div class=""><h5>{% t 'Latest Articles' %}</h5></div>
+        <ul class="list-group list-group-flush">
+          {% if pages.categories.category["Post"] != blank %}
+          {% paginate pages.categories.category["Post"].pages by options.page_post_per_page reversed %}
+          {% for page in paged.pages reversed %}
+          {% if forloop.index == 3 %}{% break %}{% endif %}
+          <li class="list-group-item px-0">
+            <a href="{{ page.url }}" title="{{ page.title }}">
+              {{ page.title }}
+            </a>
+          </li>
+          {% endfor %}
+          {% endpaginate %}
+          {% endif %}
+        </ul>
+      </div>
+
+      <!-- Side Widget blog -->
+      {% if options.widget_blog_text != empty %}
+      <div class="mb-4">
+        <div class=""><h5>{{ options.widget_blog_title }}</h5></div>
+        <div class="">
+          <p>{{ options.widget_blog_text }}</p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

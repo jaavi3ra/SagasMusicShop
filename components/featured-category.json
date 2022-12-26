@@ -1,0 +1,40 @@
+{
+  "name": "Featured Category",
+  "icon": "tag",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "permalink": {
+      "name": "Featured Category",
+      "type": "category",
+      "help": "",
+      "default": ""
+    },
+    "button": {
+      "name": "Display View All Button",
+      "type": "checkbox",
+      "help": "",
+      "default": true
+    },
+    "limit": {
+      "name": "Quantity of products",
+      "type": "select",
+      "help": "",
+      "default": "8",
+      "options": [
+        {
+          "4": "4"
+        },
+        {
+          "8": "8"
+        },
+        {
+          "12": "12"
+        }
+      ]
+    }
+  }
+}

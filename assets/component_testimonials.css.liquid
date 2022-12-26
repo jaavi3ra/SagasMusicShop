@@ -1,0 +1,32 @@
+.testimonials .img-container {
+  width: 50px;
+  overflow: hidden;
+}
+
+.testimonials .owl-dots {
+  text-align: center;
+}
+
+.testimonials .owl-dots button {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 0 3px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: {{options.primary_color}};
+  background-color: transparent;
+  opacity: 0.75;
+  transition: opacity .5s;
+  outline: none;
+}
+
+.testimonials .owl-dots button.active {
+  border-color: {{options.primary_color}};
+  background-color: {{options.primary_color}};
+}
+
+.testimonials .owl-dots button:hover {
+  opacity: 1;
+}

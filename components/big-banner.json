@@ -1,0 +1,37 @@
+{
+  "name": "Big Banner",
+  "icon": "image",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "image": {
+      "name": "Image",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "link": {
+      "name": "Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "size": {
+      "name": "Size",
+      "type": "select",
+      "help": "",
+      "default": "Container",
+      "options": [
+        {
+          "Container": "Container"
+        },
+        {
+          "Full size": "Full size"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{% if options.topbar %}
+  <!-- Fixed Top Bar -->
+  <div class="{% if options.fixed_header == 'Top Bar' and options.fixed_header != 'None' %}fixed-top{% endif %} nav-bar message-top">
+    <div class="{% if options.full-width-header %} container-fluid {% else %} container {% endif %} text-center">
+      {{ options.topbar_text }}
+    </div>
+  </div>
+{% endif %}
+<header>
+  <div class="{% if options.full-width-header %}container-fluid {% else %}container {% endif %} header-block trsn py-lg-4 py-0">
+    <div class="row align-items-center no-gutters">
+      <div class="col-lg-4 col-md-3 col-2">
+        <ul class="social d-none d-lg-block list-inline">
+          {% if social.facebook.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{social.facebook.url}}" class="trsn" title="{% t 'Go to' %} Facebook" target="_blank">
+                <i class="fab fa-facebook-f fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.twitter.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{social.twitter.url}}" class="trsn" title="{% t 'Go to' %} Twitter" target="_blank">
+                <i class="fab fa-twitter fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.pinterest.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{social.pinterest.url}}" class="trsn" title="{% t 'Go to' %} Pinterest" target="_blank">
+                <i class="fab fa-pinterest fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.instagram.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{social.instagram.url}}" class="trsn" title="{% t 'Go to' %} Instagram" target="_blank">
+                <i class="fab fa-instagram fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.whatsapp.url != blank %}
+            <li class="list-inline-item">
+              <a
+                href="{{ social.whatsapp.url }}&text={% t 'Hello'%}%20{{store.name}}"
+                class="trsn"
+                title="WhatsApp"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.youtube.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{ social.youtube.url }}" class="trsn" title="Youtube" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if social.tiktok.url != blank %}
+            <li class="list-inline-item">
+              <a href="{{social.tiktok.url}}" class="trsn" title="{% t 'Go to' %} Tiktok" target="_blank">
+                <i class="fab fa-tiktok fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+      <!-- Logo -->
+      <div class="col-lg-4 col-md-6 col-8 text-center">
+        <a href="{{store.url}}" title="{{store.name}}">
+          {% if store.logo != empty %}
+            {% if template == 'home' %}
+              <h1 class="visually-hidden">{{ store.name }}</h1>
+            {% endif %}
+            <img src="{{store.logo}}" class="navbar-brand store-image img-fluid" alt="{{store.name}}">
+          {% else %}
+            {% if template == 'home' %}
+              <h1 class="text-logo">{{ store.name }}</h1>
+            {% else %}
+              <span class="text-logo">{{ store.name }}</span>
+            {% endif %}
+          {% endif %}
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-3 col-2">
+        <ul class="list-inline text-right header_actions m-0">
+          {% if store.currencies_codes.size > 1 %}
+            <li class="list-inline-item d-none d-lg-inline-block">
+              <div class="dropdown">
+                <div
+                  class="header_actions-link"
+                  id="currencyMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  role="button"
+                >
+                  <span
+                    data-toggle="tooltip"
+                    title="{% t 'Choose a Currency' %}"
+                    data-placement="top"
+                    ><i class="fas fa-dollar-sign"></i>
+                    <span id="current_currency">{{ current_currency }}</span>
+                  </span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="currencyMenuButton">
+                  {% for currency in store.currencies_codes %}
+                    <a
+                      onclick="Jumpseller.setClientCurrency('{{currency}}');"
+                      class="dropdown-item"
+                      title="{{currency}}"
+                    >
+                      {{- currency -}}
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+            </li>
+          {% endif %}
+          {% if languages.size > 1 %}
+            <li class="list-inline-item d-none d-lg-inline-block">
+              <div class="dropdown">
+                {% for language in languages %}
+                  {% if languages.first.code == language.code %}
+                    <div
+                      id="langMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      role="button"
+                      class="header_actions-link"
+                    >
+                      <i
+                        class="fas fa-globe-americas"
+                        data-toggle="tooltip"
+                        title="{% t 'Choose a Language' %}"
+                        data-placement="top"
+                      ></i>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langMenuButton">
+                  {% for language in languages %}
+                    <a href="{{language.url}}" class="dropdown-item" title="{{language.name}}">{{ language.code }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </li>
+          {% endif %}
+          {% if store.customers_enabled %}
+            <li class="list-inline-item d-none d-lg-inline-block">
+              <a
+                href="{% if customer %}{{customer_account_url}}{% else %}{{customer_login_url}}{% endif %}"
+                id="login-link"
+                class="header_actions-link"
+                title="{% if customer %}{% t "See my Details" %}{% else %}{% t "Login" %}{% endif %}"
+                data-toggle="tooltip"
+                data-placement="top"
+              >
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if customer %}
+            <li class="list-inline-item login d-none d-lg-inline-block">
+              <a
+                title="{% t 'Logout' %}"
+                href="{{customer.logout_url}}"
+                class="header_actions-link"
+                data-toggle="tooltip"
+                title="{% t 'Logout' %}"
+                data-placement="top"
+              >
+                <i class="fas fa-sign-out-alt"></i>
+              </a>
+            </li>
+          {% endif %}
+          <li class="list-inline-item d-none d-lg-inline-block">
+            <button type="button" data-toggle="modal" data-target="#search_modal" class="p-0 header_actions-link">
+              <i class="fas fa-search" data-toggle="tooltip" title="{% t 'Search' %}" data-placement="top"></i>
+            </button>
+            <div
+              id="search_modal"
+              class="modal fade"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="search_modal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center d-block" id="search_modal">{% t "Search" %}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="jumpseller-autocomplete">
+                      <form id="header_search-form" class="search-form" method="get" action="{{search.url_send}}">
+                        <input type="text" id="searchInput"  autocomplete="off" value="{{search.query}}" name="q" class="form-control"  placeholder="{% t 'Search for products' %}" />
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% if options.disable_shopping_cart != true %}
+            <li class="list-inline-item cart">
+              <a
+                id="cart-link"
+                href="{{order.url}}"
+                title="{% t 'Shopping Cart' %}"
+                class="header_actions-link"
+                data-toggle="tooltip"
+                data-placement="top"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-size">{{ order.products_count }}</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav
+  id="main-menu"
+  class="navbar-expand-md d-none d-lg-block{% if options.vertical-menu %} vertical_menu{% endif %}{% if options.fixed_header == "Menu" and options.fixed_header != "None" %} navbar-fixed{% endif %}"
+>
+  <div class="collapse navbar-collapse" id="navbarsContainer">
+    <ul class="navbar-nav {% if options.horizontal-alignment-menu == 'Center' %}m-auto{% endif %}">
+      {% for item in menu.main.items %}
+        {% include 'navigation_menu' with item %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  {% if options.fixed_header == 'Top Bar' and options.fixed_header != 'None' and options.topbar %}
+  var $messageHeight = $(".message-top").outerHeight();
+   $("header").css("padding-top", $messageHeight )
+   {% endif %}
+</script>

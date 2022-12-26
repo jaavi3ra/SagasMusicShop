@@ -1,0 +1,15 @@
+{
+  "name": "Video",
+  "identifier": "",
+  "icon": "video",
+  "line": 10,
+  "column": 1,
+  "visibility": true,
+  "options": {
+    "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YH9A4Dc0LRE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+    "video_desktop_size": "600px",
+    "video_desktop_alignment": "m-auto"
+  },
+  "theme_block": "home",
+  "theme_block_template": "Default"
+}

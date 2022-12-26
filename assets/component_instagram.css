@@ -1,0 +1,22 @@
+.component_instagram {
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.component_instagram div {
+  display: inline-block;
+  height: 0;
+  background: #eee 50% 50% no-repeat;
+  background-size: cover;
+  width: 33.333%;
+  padding-bottom: 33.333% !important;
+}
+
+@media (min-width: 991px) {
+  .component_instagram div {
+    width: 16.666%;
+    padding-bottom: 16.666% !important;
+  }
+}

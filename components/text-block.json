@@ -1,0 +1,23 @@
+{
+  "name": "Text Block",
+  "icon": "text",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "subheading": {
+      "name": "Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "text": {
+      "name": "Text",
+      "type": "text",
+      "help": "",
+      "default": ""
+    }
+  }
+}

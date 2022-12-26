@@ -1,0 +1,78 @@
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript">
+  var shoppingCartMessage = '{% t "Go to Shopping Cart." %}';
+  var singleProductMessage = '{% t "has been added to the shopping cart." %}'
+  var multiProductMessage = '{% t "have been added to the shopping cart." %}'
+
+  function getProductOptions() {
+    var options = {};
+    $(".prod-options").each(function () {
+      var option = $(this);
+      if ($(this).is("fieldset")) options[option.attr('id')] = option.find(":checked").first().val();
+      else options[option.attr('id')] = option.val();
+    });
+    return options;
+  }
+</script>
+<script>
+  function addToCart(id, productName, qty, options) {
+    Jumpseller.addProductToCart(id, qty, options, {
+      callback: function(data, status) {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: 'toast-top-right',
+          preventDuplicates: false,
+          onclick: null,
+          showDuration: '500',
+          hideDuration: '1000',
+          timeOut: '5000',
+          extendedTimeOut: '1000',
+          showEasing: 'swing',
+          hideEasing: 'linear',
+          showMethod: 'fadeIn',
+          hideMethod: 'fadeOut',
+        };
+
+        if (data.status == 404) {
+          toastr.error(data.responseJSON.message);
+        } else {
+          if (parseInt(qty) == 1) {
+            toastr.options.onclick = function() { window.location.href = "/cart"; }
+            toastr.success(
+              qty +
+              ' ' +
+              productName +
+              ' ' +
+              singleProductMessage +
+              ' <a href="' +
+              $('#cart-link').attr('href') +
+              '"> ' +
+              shoppingCartMessage +
+              '</a>'
+            );
+          } else {
+            toastr.options.onclick = function() { window.location.href = "/cart"; }
+            toastr.success(
+              qty +
+              ' ' +
+              productName +
+              ' ' +
+              multiProductMessage +
+              ' <a href="' +
+              $('#cart-link').attr('href') +
+              '"> ' +
+              shoppingCartMessage +
+              '</a>'
+            );
+          }
+
+          // update cart in page
+          $('.cart-size').text(parseInt($('.cart-size').text()) + parseInt(qty));
+        }
+      },
+    });
+  }
+</script>

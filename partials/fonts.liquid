@@ -1,0 +1,54 @@
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script type="text/javascript">
+  WebFont.load({
+    google: {
+      families: ["{{options.general_font}}:300,400,500,600,700,800", "{{options.titles_font}}:300,400,500,600,700,800", "{{options.store_name}}:300,400,500,600,700,800"]
+    }
+  });
+</script>
+
+<style type="text/css">
+  body {
+    font-family: '{{ options.general_font }}' !important;
+  }
+
+  h1, h2 {
+    font-family: '{{ options.titles_font }}' !important;
+  }
+
+  h1 {
+    font-size:{{ options.title_font_size }} !important
+  }
+
+  .navbar-brand,
+  .text-logo,
+  h1.text-logo{
+    font-family: '{{ options.store_name }}'!important;
+    font-size: 1.25em!important;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-brand,
+    .text-logo,
+    h1.text-logo {
+      font-size: {{ options.store_name_font_size }}!important;
+    }
+  }
+  
+  body  {
+    font-size: {{ options.general_font_size }} !important;
+  }
+
+  h2.block-header {
+    font-size:{{ options.block_title_font_size }} !important
+  }
+
+  #main-menu li a {
+    font-size: {{ options.menu_font_size }} !important;
+  }
+
+  .header-block .social a i,
+  .header-block .header_actions-link i {
+    font-size: {{options.header_icons_size}} !important;
+  }
+</style>

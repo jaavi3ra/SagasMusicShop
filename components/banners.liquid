@@ -1,0 +1,123 @@
+<div id="banners-{{component.id}}" class="container">
+  <div class="component_banners row mx-n2 mb-md-5 mb-4 trsn no-gutters">
+    {% if component.options.banner-1 == blank and component.options.banner-2 == blank and component.options.banner-3 == blank and component.options.banner-4 == blank and component.options.banner-5 == blank and component.options.banner-6 == blank and component.options.banner-7 == blank and component.options.banner-8 == blank %}
+    <div class="col-md-3 col-6 no-banner">
+      <a href="{{store.url}}/admin/themes/options/{{theme.id}}" title="{% t 'Add your banners' %}" class="mx-2 mb-3"><img src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-300x300.png" alt="{% t 'Add your banners' %}"><h3>{% t 'Add your banners' %}</h3></a>
+    </div>
+    <div class="col-md-3 col-6 no-banner">
+      <a href="{{store.url}}/admin/themes/options/{{theme.id}}" title="{% t 'Add your banners' %}" class="mx-2 mb-3"><img src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-300x300.png" alt="{% t 'Add your banners' %}"><h3>{% t 'Add your banners' %}</h3></a>
+    </div>
+    <div class="col-md-3 col-6 no-banner">
+      <a href="{{store.url}}/admin/themes/options/{{theme.id}}" title="{% t 'Add your banners' %}" class="mx-2 mb-3"><img src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-300x300.png" alt="{% t 'Add your banners' %}"><h3>{% t 'Add your banners' %}</h3></a>
+    </div>
+    <div class="col-md-3 col-6 no-banner">
+      <a href="{{store.url}}/admin/themes/options/{{theme.id}}" title="{% t 'Add your banners' %}" class="mx-2 mb-3"><img src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-300x300.png" alt="{% t 'Add your banners' %}"><h3>{% t 'Add your banners' %}</h3></a>
+    </div>
+    {% else %}
+
+    {% if component.options.banner-1 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-1 }}" title="{{ component.options.title-banner-1 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-1 | resize: '360x360' }}" alt="{{ component.options.title-banner-1 }}">
+        {% else %}
+        <img src="{{ component.options.banner-1}}" alt="{{ component.options.title-banner-1 }}">
+        {% endif %}
+        {% if component.options.title-banner-1 != blank%}<h3>{{ component.options.title-banner-1 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-2 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-2 }}" title="{{ component.options.title-banner-2 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-2 | resize: '360x360' }}" alt="{{ component.options.title-banner-2 }}">
+        {% else %}
+        <img src="{{ component.options.banner-2}}" alt="{{ component.options.title-banner-2 }}">
+        {% endif %}
+      {% if component.options.title-banner-2 != blank%}<h3>{{ component.options.title-banner-2 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-3 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-3 }}" title="{{ component.options.title-banner-3 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-3 | resize: '360x360' }}" alt="{{ component.options.title-banner-3 }}">
+        {% else %}
+        <img src="{{ component.options.banner-3 }}" alt="{{ component.options.title-banner-3 }}">
+        {% endif %}
+        {% if component.options.title-banner-3 != blank%}<h3>{{ component.options.title-banner-3 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-4 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-4 }}" title="{{ component.options.title-banner-4 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-4 | resize: '360x360' }}" alt="{{ component.options.title-banner-4 }}">
+        {% else %}
+        <img src="{{ component.options.banner-4 }}" alt="{{ component.options.title-banner-4 }}">
+        {% endif %}
+        {% if component.options.title-banner-4 != blank%}<h3>{{ component.options.title-banner-4 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-5 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-5 }}" title="{{ component.options.title-banner-5 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-5 | resize: '360x360' }}" alt="{{ component.options.title-banner-5 }}">
+        {% else %}
+        <img src="{{ component.options.banner-5 }}" alt="{{ component.options.title-banner-5 }}">
+        {% endif %}
+        {% if component.options.title-banner-5 != blank%}<h3>{{ component.options.title-banner-5 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-6 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-6 }}" title="{{ component.options.title-banner-6 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-6 | resize: '360x360' }}" alt="{{ component.options.title-banner-6 }}">
+        {% else %}
+        <img src="{{ component.options.banner-6 }}" alt="{{ component.options.title-banner-6 }}">
+        {% endif %}
+        {% if component.options.title-banner-6 != blank%}<h3>{{ component.options.title-banner-6 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-7 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-7 }}" title="{{ component.options.title-banner-7 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-7 | resize: '360x360' }}" alt="{{ component.options.title-banner-7 }}">
+        {% else %}
+        <img src="{{ component.options.banner-7 }}" alt="{{ component.options.title-banner-7 }}">
+        {% endif %}
+        {% if component.options.title-banner-7 != blank%}<h3>{{ component.options.title-banner-7 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+
+    {% if component.options.banner-8 != blank %}
+    <div class="col-md-3 col-6">
+      <a href="{{ component.options.link-banner-8 }}" title="{{ component.options.title-banner-8 }}" class="mx-2 mb-3">
+        {% if component.options.banner_same_size %}
+        <img src="{{ component.options.banner-8 | resize: '360x360' }}" alt="{{ component.options.title-banner-8 }}">
+        {% else %}
+        <img src="{{ component.options.banner-8 }}" alt="{{ component.options.title-banner-8 }}">
+        {% endif %}
+        {% if component.options.title-banner-8 != blank%}<h3>{{ component.options.title-banner-8 }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+    {% endif %}
+  </div>
+</div>

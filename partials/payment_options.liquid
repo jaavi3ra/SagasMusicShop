@@ -1,0 +1,61 @@
+<ul class="payment text-lg-right text-center">
+  {% if options.webpay_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-webpay.png" alt="Webpay"></span></li>{% endif %}
+  {% if options.chek_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-chek.png" alt="Chek"></span></li>{% endif %}
+  {% if options.khipu_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-khipu.png" alt="Khipu"></span></li>{% endif %}
+  {% if options.servipag_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-servipag.png" alt="Servipag"></span></li>{% endif %}
+  {% if options.mach_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-mach.png" alt="Mach"></span></li>{% endif %}
+  {% if options.flow_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-flow.png" alt="Flow"></span></li>{% endif %}
+  {% if options.payzen_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-payzen.png" alt="Payzen"></span></li>{% endif %}
+  {% if options.caja_vecina_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-caja-vecina.png" alt="Caja Vecina"></span></li>{% endif %}
+  {% if options.multicaja_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-multicaja.png" alt="Multicaja"></span></li>{% endif %}
+  {% if options.pse_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-pse.png" alt="PSE"></span></li>{% endif %}
+  {% if options.baloto_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-baloto.png" alt="Baloto"></span></li>{% endif %}
+  {% if options.epayco_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-epayco.png" alt="ePayco"></span></li>{% endif %}
+  {% if options.efecty_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-efecty.png" alt="Efecty"></span></li>{% endif %}
+  {% if options.oxxo_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-oxxo.png" alt="Oxxo"></span></li>{% endif %}
+  {% if options.mercadopago_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-mercadopago.png" alt="Mercadopago"></span></li>{% endif %}
+  {% if options.multibanco_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-multibanco.png" alt="Multibanco"></span></li>{% endif %}
+  {% if options.mbway_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-mbway.png" alt="MBWay"></span></li>{% endif %}
+  {% if options.payu_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-payu.png" alt="PayU"></span></li>{% endif %}
+  {% if options.ideal_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-ideal.png" alt="iDEAL"></span></li>{% endif %}
+  {% if options.skrill_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-skrill.png" alt="Skrill"></span></li>{% endif %}
+  {% if options.apple_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-apple.png" alt="Apple Pay"></span></li>{% endif %}
+  {% if options.bitcoin_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-bitcoin.png" alt="Bitcoin"></span></li>{% endif %}
+  {% if options.visa_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-visa.png" alt="Visa"></span></li>{% endif %}
+  {% if options.mastercard_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-master.png" alt="Mastercard"></span></li>{% endif %}
+  {% if options.american_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-american.png" alt="American Express"></span></li>{% endif %}
+  {% if options.paypal_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-paypal.png" alt="Paypal"></span></li>{% endif %}
+  {% if options.diners_payment %}<li><span><img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-diners.png" alt="Diners Club"></span></li>{% endif %}
+  {% for language in languages %}
+  {% if languages.first.code == language.code %}
+  {% assign lang = language.code %}
+  {% endif %}
+  {% endfor %}
+
+  {% if options.bank_transfer_payment %}
+  <li>
+    <span>
+      {% if lang == 'es' or lang == 'cl' or lang == 'mx' or lang == 'co' or lang == 'es-PE' or lang == 'es-AR' %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-wire-es.png" alt="{% t 'Wire Transfer' %}">
+      {% elsif lang == 'pt' or lang == 'br' %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-wire-pt.png" alt="{% t 'Wire Transfer' %}">
+      {% else %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-wire-en.png" alt="{% t 'Wire Transfer' %}">
+      {% endif %}
+    </span>
+  </li>
+  {% endif %}
+  {% if options.manual_payment %}
+  <li>
+    <span>
+      {% if lang == 'es' or lang == 'cl' or lang == 'mx' or lang == 'co' or lang == 'es-PE' or lang == 'es-AR' %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-manual-es.png" alt="{% t 'Manual Payment' %}">
+      {% elsif lang == 'pt' or lang == 'br' %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-manual-pt.png" alt="{% t 'Manual Payment' %}">
+      {% else %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/payments/pay-manual-en.png" alt="{% t 'Manual Payment' %}">
+      {% endif %}
+    </span>
+  </li>
+  {% endif %}
+</ul>

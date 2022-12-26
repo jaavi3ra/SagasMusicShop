@@ -1,0 +1,168 @@
+<div id="component_slider-{{component.id}}" class="component_slider owl-carousel mb-5">
+  {% if component.options.slider-1 == blank and component.options.slider-2 == blank and component.options.slider-3 == blank and component.options.slider-4 == blank and component.options.slider-5 == blank %}
+
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('//assets.jumpseller.com/public/placeholder/themes/simple/slider-1-demo.jpg')"{% endif %}>
+    {% if component.options.text-button-slider-1 == blank and component.options.link-slider-1 != blank %}<a href="{{component.options.link-slider-1}}" />{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-1 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        <a href="{{store.url}}"><h2 style="color: {{ component.options.title-color-slider-1 }}; font-size:{{ component.options.slider_title_size}};">{% t 'Welcome to' %} {{store.name}}</h2></a>
+        <a href="{{store.url}}" class="btn mt-3 d-none d-sm-inline-block" style="background-color:{{component.options.color-button-slider-1}}" title="{% t 'Welcome to' %} {{store.name}}">{% t 'Go to collection' %}</a>
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="//assets.jumpseller.com/public/placeholder/themes/simple/slider-1-demo.jpg" alt="{% t 'Welcome to' %} {{store.name}}">
+    {% endif %}
+  </div>
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('//assets.jumpseller.com/public/placeholder/themes/simple/slider-2-demo.jpg')"{% endif %}>
+    {% if component.options.text-button-slider-2 == blank and component.options.link-slider-2 != blank %}<a href="{{component.options.link-slider-2}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-2 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        <a href="{{store.url}}"><h2 style="color: {{ component.options.title-color-slider-2 }}; font-size:{{ component.options.slider_title_size}};">{% t 'Welcome to' %} {{store.name}}</h2></a>
+        <a href="{{store.url}}" class="btn mt-3 d-none d-sm-inline-block" style="background-color:{{component.options.color-button-slider-2}}" title="{% t 'Welcome to' %} {{store.name}}">{% t 'Go to collection' %}</a>
+      </div>
+    </div>
+
+    {% if component.options.slider_responsive %}
+    <img src="//assets.jumpseller.com/public/placeholder/themes/simple/slider-2-demo.jpg" alt="{% t 'Welcome to' %} {{store.name}}">
+    {% endif %}
+    {% if component.options.text-button-slider-2 == blank and component.options.link-slider-2 != blank %}</a>{% endif %}
+  </div>
+
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('//assets.jumpseller.com/public/placeholder/themes/simple/slider-3-demo.jpg')"{% endif %}>
+    {% if component.options.text-button-slider-3 == blank and component.options.link-slider-3 != blank %}<a href="{{component.options.link-slider-3}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-3 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        <a href="{{store.url}}"><h2 style="color: {{ component.options.title-color-slider-3 }}; font-size:{{ component.options.slider_title_size}};">{% t 'Welcome to' %} {{store.name}}</h2></a>
+        <a href="{{store.url}}" class="btn mt-3 d-none d-sm-inline-block" style="background-color:{{component.options.color-button-slider-3}}" title="{% t 'Welcome to' %} {{store.name}}">{% t 'Go to collection' %}</a>
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="//assets.jumpseller.com/public/placeholder/themes/simple/slider-3-demo.jpg" alt="{% t 'Welcome to' %} {{store.name}}">
+    {% endif %}
+    {% if component.options.text-button-slider-3 == blank and component.options.link-slider-3 != blank %}</a>{% endif %}
+  </div>
+  {% else %}
+  {% if component.options.slider-1 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-1}}')"{% endif %}>
+    {% if component.options.text-button-slider-1 == blank and component.options.link-slider-1 != blank %}<a href="{{component.options.link-slider-1}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-1 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-1 != blank %}<a href="{{ component.options.link-slider-1 }}" title="{{ component.options.title-slider-1 }}"><h2 style="color: {{ component.options.title-color-slider-1 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-1 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-1 != blank and component.options.link-slider-1 %}<a href="{{ component.options.link-slider-1 }}" class="btn mt-3 {% unless component.options.button-slider-1 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-1}}" title="{{ component.options.text-button-slider-1 }}">{{ component.options.text-button-slider-1 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-1}}" alt="{{ component.options.title-slider-1 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-1 == blank and component.options.link-slider-1 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+
+  {% if component.options.slider-2 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-2}}')"{% endif %}>
+    {% if component.options.text-button-slider-2 == blank and component.options.link-slider-2 != blank %}<a href="{{component.options.link-slider-2}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-2 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-2 != blank %}<a href="{{ component.options.link-slider-2 }}" title="{{ component.options.title-slider-2 }}"><h2 style="color: {{ component.options.title-color-slider-2 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-2 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-2 != blank and component.options.link-slider-2 %}<a href="{{ component.options.link-slider-2 }}" class="btn mt-3 {% unless component.options.button-slider-2 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-2}}" title="{{ component.options.text-button-slider-2 }}">{{ component.options.text-button-slider-2 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-2}}" alt="{{ component.options.title-slider-2 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-2 == blank and component.options.link-slider-2 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if component.options.slider-3 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-3}}')"{% endif %}>
+    {% if component.options.text-button-slider-3 == blank and component.options.link-slider-3 != blank %}<a href="{{component.options.link-slider-3}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-3 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-3 != blank %}<a href="{{ component.options.link-slider-3 }}" title="{{ component.options.title-slider-3 }}"><h2 style="color: {{ component.options.title-color-slider-3 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-3 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-3 != blank and component.options.link-slider-3 %}<a href="{{ component.options.link-slider-3 }}" class="btn mt-3 {% unless component.options.button-slider-3 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-3}}" title="{{ component.options.text-button-slider-3 }}">{{ component.options.text-button-slider-3 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-3}}" alt="{{ component.options.title-slider-3 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-3 == blank and component.options.link-slider-3 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if component.options.slider-4 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-4}}')"{% endif %}>
+    {% if component.options.text-button-slider-4 == blank and component.options.link-slider-4 != blank %}<a href="{{component.options.link-slider-4}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-4 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-4 != blank %}<a href="{{ component.options.link-slider-4 }}" title="{{ component.options.title-slider-4 }}"><h2 style="color: {{ component.options.title-color-slider-4 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-4 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-4 != blank and component.options.link-slider-4 %}<a href="{{ component.options.link-slider-4 }}" class="btn mt-3 {% unless component.options.button-slider-4 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-4}}" title="{{ component.options.text-button-slider-4 }}">{{ component.options.text-button-slider-4 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-4}}" alt="{{ component.options.title-slider-4 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-4 == blank and component.options.link-slider-4 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if component.options.slider-5 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-5}}')"{% endif %}>
+    {% if component.options.text-button-slider-5 == blank and component.options.link-slider-5 != blank %}<a href="{{component.options.link-slider-5}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-5 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-5 != blank %}<a href="{{ component.options.link-slider-5 }}" title="{{ component.options.title-slider-5 }}"><h2 style="color: {{ component.options.title-color-slider-5 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-5 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-5 != blank and component.options.link-slider-5 %}<a href="{{ component.options.link-slider-5 }}" class="btn mt-3 {% unless component.options.button-slider-5 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-5}}" title="{{ component.options.text-button-slider-5 }}">{{ component.options.text-button-slider-5 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-5}}" alt="{{ component.options.title-slider-5 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-5 == blank and component.options.link-slider-5 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if component.options.slider-6 != blank %}
+  <div class="item" {% if component.options.slider_responsive != true %}style="background-image:url('{{component.options.slider-6}}')"{% endif %}>
+    {% if component.options.text-button-slider-6 == blank and component.options.link-slider-6 != blank %}<a href="{{component.options.link-slider-6}}">{% endif %}
+    <div class="layer" style="background-color: {{component.options.slider_background_color}}; opacity: {{component.options.slider_background_opacity}};"></div>
+    <div class="carousel-info {{ component.options.alignment-slider-6 | downcase }}">
+      <div class="carousel-info-inner px-md-0 px-4">
+        {% if component.options.title-slider-6 != blank %}<a href="{{ component.options.link-slider-6 }}" title="{{ component.options.title-slider-6 }}"><h2 style="color: {{ component.options.title-color-slider-6 }}; font-size:{{ component.options.slider_title_size}};">{{ component.options.title-slider-6 }}</h2></a>{% endif %}
+        {% if component.options.text-button-slider-6 != blank and component.options.link-slider-6 %}<a href="{{ component.options.link-slider-6 }}" class="btn mt-3 {% unless component.options.button-slider-5 %}d-none{% endunless %} d-sm-inline-block" style="background-color:{{component.options.color-button-slider-6}}" title="{{ component.options.text-button-slider-6 }}">{{ component.options.text-button-slider-6 }}</a>{% endif %}
+      </div>
+    </div>
+    {% if component.options.slider_responsive %}
+    <img src="{{component.options.slider-6}}" alt="{{ component.options.title-slider-6 }}">
+    {% endif %}
+    {% if component.options.text-button-slider-6 == blank and component.options.link-slider-6 != blank %}</a>{% endif %}
+  </div>
+  {% endif %}
+  {% endif %}
+</div>
+<script>
+    {% if component.options.slider_responsive == false %}
+    $('#component_slider-{{component.id}} .item').addClass('item-background');
+    {% endif %}
+    $('#component_slider-{{component.id}}').owlCarousel({
+      items:1,
+      {% if component.options.slider_responsive %}autoHeight:true,{% endif %}
+      loop:{% if component.options.slider_loop %}true,{% else %}false,{% endif %}
+      dots: true,
+      margin:0,
+      nav:true,
+      autoplay: {% if component.options.slider_autoplay %}true{% else %}false{% endif %},
+      {% if component.options.slider_autoplay %}autoplayTimeout: {{ component.options.slider_autoplay_speed }},{% endif %}
+      autoplayHoverPause:{% if component.options.slider_pause %}true,{% else %}false,{% endif %}
+      navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"]
+    })
+</script>

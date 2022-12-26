@@ -1,0 +1,69 @@
+<div class="container blog mt-lg-0 my-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-header">{{page.title}}</h1>
+    </div>
+    {% if page.images.first != blank %}
+    <div class="col-12 mb-4">
+      <img src="{{page.images.first}}" class="img-fluid"/>
+    </div>
+    {% endif %}
+    <div class="col-12 page-body mb-5">{{page.body}}</div>
+    <!-- Blog Entries Column -->
+    <div class="col-12 blog_list">
+      <div class="row mb-md-5 mb-4 mx-n2 no-gutters">
+        {% unless pages.categories.category["Post"] == blank %}
+        {% paginate pages.categories.category["Post"].pages by options.page_post_per_page %}
+        {% for page in paged.pages %}
+        <div class="col-md-4 mb-4 px-2 text-center">
+          <a href="{{ page.url }}" title="{{ page.title }}" class="mb-md-0 mb-4">
+            {% if page.images == empty %}
+            <img class="img-fluid" src="//assets.jumpseller.com/public/placeholder/themes/simple/placeholder-360x240.png" alt="{{ page.title }}">
+            {% else %}
+            <img class="img-fluid" src="{{page.images.first | resize: '360x240'}}" srcset="{{page.images.first | resize: '360x240'}} 1x,{{page.images.first | resize: '720x480'}} 2x" alt="{{page.title}}" />
+            {% endif %}
+            <h5 class="p-2 m-0">{{ page.title }}</h5>
+          </a>
+        </div>
+        {% endfor %}
+
+        <div class="clearfix"></div>
+        <div class="col-12">
+          {% if paged.total_pages > 1 %}
+          <!-- Pagination -->
+          <div class="category-pager">
+            {% if paged.current_page == 1 %}
+            <a class="square-button disabled"><i class="fas fa-angle-left"></i></a>
+            <div class="count">
+              <span>{{ paged.current_page }}</span>
+              <span>{% t "of" %}</span>
+              <span>{{ paged.total_pages }}</span>
+            </div>
+            <a href="{{ paged.next_url }}" class="square-button"><i class="fas fa-angle-right"></i></a>
+            {% elsif paged.current_page == paged.total_pages %}
+            <a href="{{ paged.previous_url }}" class="square-button"><i class="fas fa-angle-left"></i></a>
+            <div class="count">
+              <span>{{ paged.current_page }}</span>
+              <span>{% t "of" %}</span>
+              <span>{{ paged.total_pages }}</span>
+            </div>
+            <a class="square-button disabled"><i class="fas fa-angle-right"></i></a>
+            {% else %}
+            <a href="{{ paged.previous_url }}" class="square-button"><i class="fas fa-angle-left"></i></a>
+            <div class="count">
+              <span>{{ paged.current_page }}</span>
+              <span>{% t "of" %}</span>
+              <span>{{ paged.total_pages }}</span>
+            </div>
+            <a href="{{ paged.next_url }}" class="square-button"><i class="fas fa-angle-right"></i></a>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% endpaginate %}
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+</div>

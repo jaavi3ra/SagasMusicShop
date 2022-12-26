@@ -1,0 +1,31 @@
+{
+  "name": "Instagram Feed",
+  "icon": "image",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "title": {
+      "name": "Title",
+      "type": "input",
+      "help": "",
+      "default": "Instagram"
+    },
+    "limit": {
+      "name": "Number of Instagram Photos",
+      "type": "select",
+      "help": "",
+      "default": "12",
+      "options": [
+        {
+          "6": "6"
+        },
+        {
+          "12": "12"
+        }
+      ]
+    }
+  }
+}

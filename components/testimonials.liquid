@@ -1,0 +1,117 @@
+<div class="testimonials container text-center mb-5 px-md-5">
+  <h2 class="block-header text-center">
+    {% if component.options.title %}
+    {{component.options.title}}
+    {% else %}
+    {% t "Testimonials" %}
+    {% endif %}
+  </h2>
+  <div id="testimonials-{{component.id}}" class="owl-carousel">
+    {% if component.options.testimonial_text_1 != blank %}
+    <div class="item">
+      <div class="testimonial-container">
+        {% if component.options.testimonial_img_1 != blank %}
+        <span class="img-container border rounded-circle d-block mb-2 mx-auto">
+          <img src="{{component.options.testimonial_img_1 | resize: '50x50' }}" class="w-100" alt="{{component.options.testimonial_author_1}}">
+        </span>
+        {% endif %}
+        <h4>{{component.options.testimonial_text_1}}</h4>
+        {% if component.options.testimonial_text_1 != blank %}
+        <span class="testimonial-author text-muted mt-3 d-block">
+          {{component.options.testimonial_author_1}}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if component.options.testimonial_text_2 != blank %}
+    <div class="item">
+      <div class="testimonial-container">
+        {% if component.options.testimonial_img_2 != blank %}
+        <span class="img-container border rounded-circle d-block mb-2 mx-auto">
+          <img src="{{component.options.testimonial_img_2 | resize: '50x50' }}" class="w-100" alt="{{component.options.testimonial_author_2}}">
+        </span>
+        {% endif %}
+        <h4>{{component.options.testimonial_text_2}}</h4>
+        {% if component.options.testimonial_text_2 != blank %}
+        <span class="testimonial-author text-muted mt-3 d-block">
+          {{component.options.testimonial_author_2}}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if component.options.testimonial_text_3 != blank %}
+    <div class="item">
+      <div class="testimonial-container">
+        {% if component.options.testimonial_img_3 != blank %}
+        <span class="img-container border rounded-circle d-block mb-2 mx-auto">
+          <img src="{{component.options.testimonial_img_3 | resize: '50x50' }}" class="w-100" alt="{{component.options.testimonial_author_3}}">
+        </span>
+        {% endif %}
+        <h4>{{component.options.testimonial_text_3}}</h4>
+        {% if component.options.testimonial_text_3 != blank %}
+        <span class="testimonial-author text-muted mt-3 d-block">
+          {{component.options.testimonial_author_3}}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if component.options.testimonial_text_4 != blank %}
+    <div class="item">
+      <div class="testimonial-container">
+        {% if component.options.testimonial_img_4 != blank %}
+        <span class="img-container border rounded-circle d-block mb-2 mx-auto">
+          <img src="{{component.options.testimonial_img_4 | resize: '50x50' }}" class="w-100" alt="{{component.options.testimonial_author_4}}">
+        </span>
+        {% endif %}
+        <h4>{{component.options.testimonial_text_4}}</h4>
+        {% if component.options.testimonial_text_4 != blank %}
+        <span class="testimonial-author text-muted mt-3 d-block">
+          {{component.options.testimonial_author_4}}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if component.options.testimonial_text_5 != blank %}
+    <div class="item">
+      <div class="testimonial-container">
+        {% if component.options.testimonial_img_5 != blank %}
+        <span class="img-container border rounded-circle d-block mb-2 mx-auto">
+          <img src="{{component.options.testimonial_img_5 | resize: '50x50' }}" class="w-100" alt="{{component.options.testimonial_author_5}}">
+        </span>
+        {% endif %}
+        <h5>{{component.options.testimonial_text_5}}</h5>
+        {% if component.options.testimonial_text_5 != blank %}
+        <span class="testimonial-author text-muted mt-3 d-block">
+          {{component.options.testimonial_author_5}}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+$('#testimonials-{{component.id}}').owlCarousel({
+  items:1,
+  autoHeight:true,
+  loop: false,
+  rewind: true,
+  dots: true,
+  margin:0,
+  nav: false,
+  autoHeight: true,
+  autoplay: {% if component.options.testimonials_autoplay %}true{% else %}false{% endif %},
+  {% if component.options.testimonials_autoplay %}autoplayTimeout: {{ component.options.testimonials_autoplay_speed }},{% endif %}
+  autoplayHoverPause:{% if component.options.testimonials_pause %}true,{% else %}false,{% endif %}
+  navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"]
+})
+</script>

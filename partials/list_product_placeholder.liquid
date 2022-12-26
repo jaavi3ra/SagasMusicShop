@@ -1,0 +1,14 @@
+{% assign placeholders = "1,2,3,4" | split: "," %}
+{% for placeholder in placeholders %}
+<div class="col-lg-3 {% if options.product_block_2_columns %}col-6 px-md-2 px-1{% else %}col-sm-6 px-2{% endif %}">
+  <div class="product-block text-center mb-3 p-md-3 p-2 rounded trsn">
+    <img class="w-100" src="//assets.jumpseller.com/public/placeholder/themes/simple/no-image-home.png" alt="{% t 'Add your products' %}">
+    <div class="caption">
+      <a href="{{store.url}}/admin/products/new" class="btn btn-primary d-block mt-2">
+        <span class="product-block_button-icon"><i class="fas fa-plus"></i> {% t 'Add products' %}</span>
+      </a>
+      <div class="list-price text-center mt-2">0.00</div>
+    </div>
+  </div>
+</div>
+{% endfor %}

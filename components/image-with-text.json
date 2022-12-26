@@ -1,0 +1,55 @@
+{
+  "name": "Image with Text",
+  "icon": "image",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "image": {
+      "name": "Image",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "image_alignment": {
+      "name": "Image Alignment",
+      "type": "select",
+      "help": "",
+      "default": "Left",
+      "options": [
+        {
+          "Left": "Left"
+        },
+        {
+          "Right": "Right"
+        }
+      ]
+    },
+    "title": {
+      "name": "Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "text": {
+      "name": "Text",
+      "type": "text",
+      "help": "",
+      "default": ""
+    },
+    "button_text": {
+      "name": "Button label",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "button_link": {
+      "name": "Button link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    }
+  }
+}

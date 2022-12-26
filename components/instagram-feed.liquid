@@ -1,0 +1,53 @@
+<div class="container-fluid mb-5">
+  <div class="row">
+    {% if component.options.title != blank %}
+    <div class="col-12">
+      <h2 class="block-header text-center">{{component.options.title}}</h2>
+    </div>
+    {% endif %}
+    {% if social.instagram.url != blank %}
+    <div id="instagram-{{component.id}}" class="component_instagram col-12"></div>
+    {% capture follow_us_translation %}{% t "Follow Us" %}{% endcapture %}
+    <a href="{{ social.instagram.url }}" target="_blank" title="{{follow_us_translation}} @{{ social.instagram.handler }}" class="btn btn-primary mt-5">
+      <i class="fab fa-instagram" aria-hidden="true"></i> {{ follow_us_translation }}
+    </a>
+    {% else %}
+    <div class="text-center mt-5 col-12">
+      <h5>{% t "You need to login in your Instagram account" %}</h5>
+      <a href="{{store.url}}/admin/settings/general/store_info" class="btn btn-primary mt-5" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i> {% t "Login here" %}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% if social.instagram.url != blank %}
+<!-- Instagram code -->
+<script>
+  $.ajax({
+    url: "/instagram-app/media",
+    data: {
+      count: {{ component.options.limit }}
+    },
+      success: function(json) {
+    		document.getElementById("instagram-{{component.id}}").innerHTML = '';
+        for (var i in json.posts) {
+          if(i >= {{component.options.limit}}){continue};
+          url = json.posts[i].thumbnail_url;
+          shortcode = json.posts[i].shortcode;
+
+          newElement = document.createElement('div');
+          newElement.className = 'insta_img';
+          newElement.style = 'background-image: url(' + url + ')';
+
+          newElementLink = document.createElement('a');
+          newElementLink.href = json.posts[i].permalink;
+          newElementLink.target = "_blank";
+          newElementLink.appendChild(newElement);
+
+
+          var clientHeight = document.getElementById('instagram-{{component.id}}').clientHeight;
+          document.getElementById("instagram-{{component.id}}").appendChild(newElementLink);
+        }
+      }
+    });
+</script>
+{% endif %}

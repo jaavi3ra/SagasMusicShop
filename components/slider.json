@@ -1,0 +1,482 @@
+{
+  "name": "Slider",
+  "icon": "image",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "slider_responsive": {
+      "name": "Activate Responsive Slider",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "slider_loop": {
+      "name": "Activate Loop",
+      "type": "checkbox",
+      "help": "",
+      "default": true
+    },
+    "slider_autoplay": {
+      "name": "Activate Autoplay",
+      "type": "checkbox",
+      "help": "",
+      "default": true
+    },
+    "slider_autoplay_speed": {
+      "name": "Autoplay Time Out",
+      "type": "select",
+      "help": "",
+      "default": "3000",
+      "options": [
+        {
+          "1 second": "1000"
+        },
+        {
+          "2 seconds": "2000"
+        },
+        {
+          "3 seconds": "3000"
+        },
+        {
+          "4 seconds": "4000"
+        },
+        {
+          "5 seconds": "5000"
+        }
+      ]
+    },
+    "slider_background_opacity": {
+      "name": "Slider Opacity Percentage",
+      "type": "select",
+      "help": "",
+      "default": "0.4",
+      "options": [
+        {
+          "0%": "0"
+        },
+        {
+          "10%": "0.1"
+        },
+        {
+          "20%": "0.2"
+        },
+        {
+          "30%": "0.3"
+        },
+        {
+          "40%": "0.4"
+        },
+        {
+          "50%": "0.5"
+        },
+        {
+          "60%": "0.6"
+        },
+        {
+          "70%": "0.7"
+        },
+        {
+          "80%": "0.8"
+        },
+        {
+          "90%": "0.9"
+        }
+      ]
+    },
+    "slider_title_size": {
+      "name": "Slider Titles Size",
+      "type": "select",
+      "help": "",
+      "default": "2.5rem",
+      "options": [
+        {
+          "24px": "1.5rem"
+        },
+        {
+          "32px": "2rem"
+        },
+        {
+          "40px": "2.5rem"
+        },
+        {
+          "48px": "3rem"
+        },
+        {
+          "56px": "3.5rem"
+        },
+        {
+          "64px": "4rem"
+        }
+      ]
+    },
+    "slider_pause": {
+      "name": "Activate Pause on Hover",
+      "type": "checkbox",
+      "help": "",
+      "default": true
+    },
+    "slider_background_color": {
+      "name": "Slider Background Opacity color",
+      "type": "color",
+      "help": "",
+      "default": "000000"
+    },
+    "slider-1": {
+      "name": "Slide 1 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-1": {
+      "name": "Slide 1 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "center",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-1": {
+      "name": "Slide 1 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-1": {
+      "name": "Slide 1 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "ffffff"
+    },
+    "button-slider-1": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-1": {
+      "name": "Slide 1 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-1": {
+      "name": "Slide 1 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-1": {
+      "name": "Slider 1 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    },
+    "slider-2": {
+      "name": "Slide 2 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-2": {
+      "name": "Slide 2 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "left",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-2": {
+      "name": "Slide 2 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-2": {
+      "name": "Slide 2 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "FFFFFF"
+    },
+    "button-slider-2": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-2": {
+      "name": "Slide 2 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-2": {
+      "name": "Slide 2 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-2": {
+      "name": "Slider 2 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    },
+    "slider-3": {
+      "name": "Slide 3 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-3": {
+      "name": "Slide 3 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "right",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-3": {
+      "name": "Slide 3 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-3": {
+      "name": "Slide 3 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "FFFFFF"
+    },
+    "button-slider-3": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-3": {
+      "name": "Slide 3 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-3": {
+      "name": "Slide 3 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-3": {
+      "name": "Slider 3 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    },
+    "slider-4": {
+      "name": "Slide 4 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-4": {
+      "name": "Slide 4 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "center",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-4": {
+      "name": "Slide 4 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-4": {
+      "name": "Slide 4 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "FFFFFF"
+    },
+    "button-slider-4": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-4": {
+      "name": "Slide 4 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-4": {
+      "name": "Slide 4 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-4": {
+      "name": "Slider 4 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    },
+    "slider-5": {
+      "name": "Slide 5 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-5": {
+      "name": "Slide 5 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "center",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-5": {
+      "name": "Slide 5 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-5": {
+      "name": "Slide 5 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "FFFFFF"
+    },
+    "button-slider-5": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-5": {
+      "name": "Slide 5 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-5": {
+      "name": "Slide 5 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-5": {
+      "name": "Slider 5 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    },
+    "slider-6": {
+      "name": "Slide 6 Image (Suggested: 1905x800)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "alignment-slider-6": {
+      "name": "Slide 6 Alignment",
+      "type": "select",
+      "help": "",
+      "default": "center",
+      "options": [
+        {
+          "Left": "left"
+        },
+        {
+          "Center": "center"
+        },
+        {
+          "Right": "right"
+        }
+      ]
+    },
+    "title-slider-6": {
+      "name": "Slide 6 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "title-color-slider-6": {
+      "name": "Slide 6 Title Color",
+      "type": "color",
+      "help": "",
+      "default": "FFFFFF"
+    },
+    "button-slider-6": {
+      "name": "Show button in mobile version",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "link-slider-6": {
+      "name": "Slide 6 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "text-button-slider-6": {
+      "name": "Slide 6 Button Text",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "color-button-slider-6": {
+      "name": "Slider 6 Button Color",
+      "type": "color",
+      "help": "",
+      "default": "4ec0a6"
+    }
+  }
+}

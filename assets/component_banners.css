@@ -1,0 +1,31 @@
+.component_banners img {
+  width: 100%;
+}
+
+.component_banners div > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.component_banners div > a h3 {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 10px 10px 20px 10px;
+  font-weight: 800;
+}
+
+.component_banners div > a:hover h3 {
+  bottom: 0;
+}
+
+.component_banners div > a:hover img {
+  opacity: 0.75;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Big Banner",
+  "identifier": "",
+  "icon": "image",
+  "line": 3,
+  "column": 1,
+  "visibility": false,
+  "options": {
+    "image": "https://assets.jumpseller.com/store/sagas-music-shop/themes/508873/options/82380118/banner-mercado-pago-y-envios-gratis-celular%20%281080%20%C3%97%20400%C2%A0px%29.png?1663362346",
+    "link": null,
+    "size": "Full size"
+  },
+  "theme_block": "home",
+  "theme_block_template": "Default"
+}

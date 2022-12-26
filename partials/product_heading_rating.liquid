@@ -1,0 +1,7 @@
+<div class="product-rating">
+  {% render 'product_rating', product: product %}
+  <div onClick="scrollToReviews()" class="reviews-number">
+    ({{ product.reviews.count }}
+    {% if product.reviews.count > 1 %} {% t "Reviews" %}{% else %} {% t "Review" %}{% endif %})
+  </div>
+</div>

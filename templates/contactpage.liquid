@@ -1,0 +1,22 @@
+<div class="container contact pt-lg-0 pt-5 my-5">
+  <div class="row">
+    <section class="col-lg-8 mb-lg-0 mb-4">
+      <h2 class="block-header">{% t "Contact Form" %}</h2>
+      <p>{% t "Send us a message and we will reply to you as quick as possible." %}</p>
+      {{ contact_form }}
+    </section>
+    <section class="col-lg-4">
+      <h2>{% t "Contact Information" %}</h2>
+      <ul id="contact-list">
+        {% if options.display_contact_email %}<li><i class="fas fa-paper-plane fa-fw"></i> <a href="mailto:{{ store.email }}">{{ store.email }}</a></li>{% endif %}
+        {% if options.phone != empty %}<li><i class="fas fa-phone"></i> <a href="tel:{{ options.phone | replace: ' ', ''}}">{{ options.phone }}</a></li>{% endif %}
+        {% if store.address != empty %}
+        <li><i class="fas fa-map-marker"></i> {{ store.address }} {{ store.street_number }}<br>{{store.postal}} {{store.city}}<br>{{store.country}}</li>
+        {% endif %}
+      </ul>
+    </section>
+  </div>
+</div>
+{% if store.address != empty %}
+<iframe width="100%" height="430" frameborder="0" style="border:0" src="https://maps.google.com/maps?q={{ store.address | replace: '#', '' }} {{ store.street_number }},{{ store.city }},{{ store.region }},{{ store.country }}&t=&z=15&ie=UTF8&iwloc=&output=embed" scrolling="no"> </iframe>
+{% endif %}

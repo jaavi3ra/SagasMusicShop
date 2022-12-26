@@ -1,0 +1,31 @@
+{
+  "name": "Custom Code",
+  "icon": "code",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "custom_code": {
+      "name": "Custom Code",
+      "type": "text",
+      "help": "Use this for external apps or your custom design",
+      "default": ""
+    },
+    "custom_code_size": {
+      "name": "Size",
+      "type": "select",
+      "help": "",
+      "default": "Container",
+      "options": [
+        {
+          "Container": "Container"
+        },
+        {
+          "Full size": "Full size"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+.component_slider .item .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.component_slider .owl-nav button {
+  color: #fff !important;
+  opacity: 0.5;
+  font-size: 3em !important;
+  z-index: 2;
+  position: absolute;
+  height: 50px;
+  margin-top: -25px;
+  top: 50%;
+}
+
+.component_slider .owl-nav {
+  display: none;
+}
+
+.component_slider .owl-nav button.disabled {
+  display: none;
+}
+
+.component_slider .owl-nav button.owl-prev {
+  left: 15px;
+  transform: translateX(-100px);
+}
+
+.component_slider .owl-nav button.owl-next {
+  right: 15px;
+  transform: translateX(100px);
+}
+
+.component_slider:hover .owl-nav button.owl-prev,
+.component_slider:hover .owl-nav button.owl-next {
+  transform: translateX(0);
+}
+
+.component_slider .owl-nav button:hover {
+  opacity: 1;
+}
+
+.component_slider .owl-dots {
+  position: absolute;
+  bottom: -40px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.component_slider button.owl-dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #666;
+  margin: 10px 5px 0 5px;
+  border-radius: 7px;
+}
+
+.component_slider button.owl-dot.active {
+  background-color: #666;
+}
+
+.component_slider .item-background {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+}
+
+.component_slider .item .carousel-info {
+  height: 100%;
+  display: table;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.component_slider .item .carousel-info.center {
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.component_slider .item .carousel-info .carousel-info-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.component_slider .item .carousel-info h2 {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 414px) {
+  .component_slider .item .carousel-info h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .component_slider .item .carousel-info {
+    width: 550px;
+  }
+
+  .component_slider .item .carousel-info.left {
+    left: 50px;
+    text-align: left;
+  }
+
+  .component_slider .item .carousel-info.right {
+    right: 50px;
+    text-align: right;
+  }
+
+  .component_slider {
+    overflow: hidden;
+  }
+
+  .component_slider .owl-nav {
+    display: block;
+  }
+
+  .component_slider .owl-dots {
+    bottom: 0;
+  }
+
+  .component_slider button.owl-dot {
+    border-color: #fff;
+    margin-top: 0;
+  }
+
+  .component_slider button.owl-dot.active {
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 1680px) {
+  .component_slider .item-background {
+    height: 575px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .component_slider .item-background {
+    height: 360px;
+  }
+}
+
+@media (max-width: 991px) {
+  .component_slider .item-background {
+    height: 290px;
+  }
+
+  .component_slider .owl-nav button {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 736px) {
+  .component_slider .item-background {
+    height: 280px;
+  }
+}
+
+@media (max-width: 667px) {
+  .component_slider .item-background {
+    height: 200px;
+  }
+
+  .component_slider .item .carousel-info h2 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .component_slider .item-background {
+    height: 200px;
+  }
+}

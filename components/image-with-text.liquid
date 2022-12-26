@@ -1,0 +1,18 @@
+<div id="image-w-text-{{component.id}}" class="container mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 {% if component.options.image_alignment == 'Left' %}order-md-1{% else %}order-md-2{% endif %}">
+      {% if component.options.image != blank %}
+      <img src="{{component.options.image}}" alt="{{component.options.title}}" class="w-100"/>
+      {% else %}
+      <img src="//assets.jumpseller.com/public/placeholder/themes/simple/no-image-home.png" alt="{{component.options.title}}" class="w-100"/>
+      {% endif %}
+    </div>    
+    <div class="col-md-6 {% if component.options.image_alignment == 'Left' %}order-md-2{% else %}order-md-1{% endif %}">
+      <h4>{{component.options.title}}</h4>
+      <p>{{component.options.text}}</p>
+      {% if component.options.button_text %}
+      <a href="{{component.options.button_link}}" class="btn btn-primary">{{component.options.button_text}}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

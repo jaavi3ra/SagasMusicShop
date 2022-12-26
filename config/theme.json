@@ -1,0 +1,16 @@
+{
+  "Info": {
+    "name": "Simple",
+    "author": "Jumpseller",
+    "default_lang": "en",
+    "allow_multicurrency": true
+  },
+  "Menus": {
+    "main": {
+      "name": "Main Menu"
+    },
+    "footer": {
+      "name": "Footer Menu"
+    }
+  }
+}

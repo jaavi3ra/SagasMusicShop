@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="{{ languages.first.locale }}" xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+  <title>{{page_title}}</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="robots" content="follow, all" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://images.jumpseller.com">
+  <link rel="preconnect" href="https://cdnx.jumpseller.com">
+  <link rel="preconnect" href="https://assets.jumpseller.com">
+
+  {% include 'og_meta_tags' %}
+
+  {% if languages.size > 1 %}
+  {% for language in languages %}
+  <link rel="alternate" hreflang="{{language.locale}}" href="{{language.url}}" />
+  {% endfor %}
+  {% endif %}
+
+  <link rel="canonical" href="{{canonical_url}}">
+
+  {% include 'schema' %}
+
+  <script src="//assets.jumpseller.com/public/jquery-3.4.1.min.js"></script>
+
+  {{favicon}}
+
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="//assets.jumpseller.com/public/fontawesome/5.15.4/all.css">
+
+  {% if options.display_cart_notification %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ 'app.css' | asset }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ 'color_pickers.css' | asset }}"/>
+
+  {% if template == 'home' or template == 'product' %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  {% endif %}
+  {% if template == 'product' %}
+  <script src="{{ 'owl.carousel2.thumbs.min.js' | asset }}"></script>
+  {% endif %}
+
+  {% include 'fonts' %}
+
+  <!-- Autocomplete search -->
+  {% if store.autocomplete_access %}
+  <script src="//assets.jumpseller.com/public/autocomplete/algolia-autocomplete@1.7.1.js"></script>
+  <script src="//assets.jumpseller.com/public/autocomplete/jumpseller-autocomplete@1.0.0.min.js" data-suggest-categories="false" defer="defer">
+  </script>
+  {% endif %}
+
+  {% if options.head_code != empty %}
+  <!-- Custom head code -->
+  {{options.head_code}}
+  {% endif %}
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  {% if template != 'cart' and template != 'checkout' and template != 'revieworder' and template != 'success' %}
+
+  {% include "header_area" %}
+
+  {% include "mobile_navigation" %}
+
+  {% endif %}
+  <!-- Page Content -->
+  {{content}}
+
+  <!-- Footer -->
+  {% if template != 'cart' and template != 'checkout' and template != 'revieworder' and template != 'success' %}
+  {% include 'footer' %}
+  {% endif %}
+  <!-- /.container -->
+
+  <!-- Bootstrap Core -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/bootstrap.filestyle/1.1.0/js/bootstrap-filestyle.min.js"></script>
+  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  {% include 'currency_options' %}
+
+  <script type="text/javascript" src="{{ 'main.js' | asset }}"></script>
+
+  {% if options.display_cart_notification %}
+  {% include 'addtocart' %}
+  {% endif %}
+
+  {% if options.body_code != empty %}
+  <!-- Custom body code -->
+  {{options.body_code}}
+  {% endif %}
+
+  {% if options.store_whatsapp == true and social.whatsapp.url != blank %}
+	<a href="{{ social.whatsapp.url }}" class=" store-whatsapp store-whatsapp--{{ options.store_whatsapp_position }}" title="{% t 'Send us a WhatsApp message' %}" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a>
+	{% endif %}
+  
+</body>
+</html>

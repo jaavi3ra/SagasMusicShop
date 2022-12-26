@@ -1,0 +1,512 @@
+msgid "Try searching"
+msgstr "Intenta buscar"
+
+msgid "again or keep shopping by clicking on the button below"
+msgstr "nuevamente o sigue comprando al hacer click en el botón de abajo"
+
+msgid "Go back & Keep Shopping"
+msgstr "Volver y Seguir Comprando"
+
+msgid "Product(s)"
+msgstr "Producto(s)"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "Sort by"
+msgstr "Ordenar por"
+
+msgid "Clear filters"
+msgstr "Limpiar filtros"
+
+msgid "There aren't any products available in this category"
+msgstr "No hay productos disponibles en esta categoría"
+
+msgid "There aren't any products available with the selected filters"
+msgstr "No hay productos disponibles con los filtros seleccionados"
+
+msgid "of"
+msgstr "de"
+
+msgid "Latest Articles"
+msgstr "Últimos Artículos"
+
+msgid "SKU"
+msgstr "SKU"
+
+msgid "Stock"
+msgstr "Disponibilidad"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Choose File"
+msgstr "Elegir Archivo"
+
+msgid "Out of stock"
+msgstr "Agotado"
+
+msgid "This product has run out of stock. You may send us an inquiry about it"
+msgstr "Este producto no tiene stock disponible. Puedes enviarnos una consulta al respecto"
+
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+msgid "Continue Shopping"
+msgstr "Continúa Comprando"
+
+msgid "Not Available"
+msgstr "No Disponible"
+
+msgid "This product is currently unavailable. You may send us an inquiry about it"
+msgstr "Este producto no está disponible. Puedes enviarnos una consulta al respecto"
+
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgid "Add to Cart"
+msgstr "Añadir al Carro"
+
+msgid "Only"
+msgstr "Solo quedan"
+
+msgid "units of this product remain"
+msgstr "unidades de este producto"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "Attachments"
+msgstr "Archivos"
+
+msgid "Share"
+msgstr "Compartir"
+
+msgid "Share on Facebook"
+msgstr "Compartir en Facebook"
+
+msgid "Check this product"
+msgstr "Ve este producto"
+
+msgid "Share on Twitter"
+msgstr "Compartir en Twitter"
+
+msgid "Share on Pinterest"
+msgstr "Compartir en Pinterest"
+
+msgid "Share on Tumblr"
+msgstr "Compartir en Tumblr"
+
+msgid "The sum of the size of the selected files must be lower than 10MB."
+msgstr "La suma del tamaño de los archivos seleccionados debe ser inferior a 10MB."
+
+msgid "There's no product image available"
+msgstr "No hay imagen del producto disponible"
+
+msgid "Shopping Cart"
+msgstr "Carro de Compras"
+
+msgid "The shopping cart is currently empty. You can go back and start adding products."
+msgstr "El carro de compras está vacío. Puedes volver y comenzar a agregar productos."
+
+msgid "Cart"
+msgstr "Carro"
+
+msgid "Checkout"
+msgstr "Proceso de Pago"
+
+msgid "Order review"
+msgstr "Revisión del pedido"
+
+msgid "Success"
+msgstr "Éxito"
+
+msgid "Product"
+msgstr "Producto"
+
+msgid "Qty"
+msgstr "Cantidad"
+
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+msgid "Subtotal"
+msgstr "Subtotal"
+
+msgid "Remove Product"
+msgstr "Quitar Producto"
+
+msgid "Estimated shipping cost"
+msgstr "Costo estimado de envío"
+
+msgid "Discount code"
+msgstr "Código de descuento"
+
+msgid "Shipping"
+msgstr "Envío"
+
+msgid "Discount"
+msgstr "Descuento"
+
+msgid "Tax"
+msgstr "Impuesto"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "The minimum quantity of products to proceed with the purchase is %{minimum}. To continue please add at least %{at_least} product(s)"
+msgstr "La cantidad mínima de productos para proceder con la compra es %{minimum}. Para continuar, agregue al menos %{at_least} producto(s)"
+
+msgid "The minimum amount to proceed with your purchase is %{minimum}. To continue please add at least %{at_least}"
+msgstr "El monto mínimo para proceder con su compra es %{minimum}. Para continuar por favor agregue al menos %{at_least}"
+
+msgid "Proceed to Checkout"
+msgstr "Proceder al Pago"
+
+msgid "Payment will be processed in %{store_currency} at the current exchange rate"
+msgstr "El pago será procesado en %{store_currency} con el tipo de cambio actual"
+
+msgid "Review order"
+msgstr "Revisar Compra"
+
+msgid "Edit Cart"
+msgstr "Editar Carro"
+
+msgid "Shipping Address"
+msgstr "Dirección de Envío"
+
+msgid "Billing Address"
+msgstr "Dirección de Facturación"
+
+msgid "Summary"
+msgstr "Resumen"
+
+msgid "Place Order"
+msgstr "Confirmar Pedido"
+
+msgid "Your order is pending payment."
+msgstr "Tu orden está pendiente de pago"
+
+msgid "Your order has been paid successfully."
+msgstr "Tu orden fue pagada con éxito."
+
+msgid "Thank you for buying in"
+msgstr "Gracias por comprar en"
+
+msgid "This is your order number"
+msgstr "Este es el número de tu orden"
+
+msgid "An email with your order summary has been sent to"
+msgstr "Hemos enviado un email con el resumen de tu pedido a"
+
+msgid "Receive notifications about the status of your order through Messenger"
+msgstr "Reciba notificaciones sobre el estado de su pedido a través de Messenger"
+
+msgid "Order will be Shipped to"
+msgstr "La orden será enviada a"
+
+msgid "Information for Payment"
+msgstr "Información de Pago"
+
+msgid "Bought in:"
+msgstr "Comprado en:"
+
+msgid "If you have any question or special requirement about reimbursements or shipping please contact us at the email:"
+msgstr "Si tienes alguna pregunta o requisito especial sobre reembolsos o envíos por favor contáctanos al correo electrónico:"
+
+msgid "Create your Customer Account"
+msgstr "Crea tu Cuenta de Cliente"
+
+msgid "Contact Form"
+msgstr "Formulario de Contacto"
+
+msgid "Send us a message and we will reply to you as quick as possible."
+msgstr "Envíanos un mensaje y te responderemos lo antes posible."
+
+msgid "Contact Information"
+msgstr "Información de contacto"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Teléfono"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Add"
+msgstr "Añadir"
+
+msgid "Make Primary"
+msgstr "Haz primario"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Previous Sales"
+msgstr "Ventas anteriores"
+
+msgid "You have not made any purchases."
+msgstr "No has realizado ninguna compra."
+
+msgid "Order"
+msgstr "Pedido"
+
+msgid "View Order Details"
+msgstr "Ver Detalles del Pedido"
+
+msgid "Hide Order Details"
+msgstr "Ocultar Detalles del Pedido"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Order Date"
+msgstr "Fecha del pedido"
+
+msgid "Order Total"
+msgstr "Total del pedido"
+
+msgid "Tracking number"
+msgstr "Número de seguimiento"
+
+msgid "Tracking company"
+msgstr "Empresa de envío"
+
+msgid "Reorder"
+msgstr "Reordenar"
+
+msgid "The order"
+msgstr "El pedido"
+
+msgid "contains the following items"
+msgstr "contiene los siguientes items"
+
+msgid "Product Details"
+msgstr "Detalles del producto"
+
+msgid "Price"
+msgstr "Precio"
+
+msgid "This product is not available"
+msgstr "Este producto no está disponible"
+
+msgid "Discounts"
+msgstr "Descuentos"
+
+msgid "Client Address"
+msgstr "Dirección del cliente"
+
+msgid "Client Details"
+msgstr "Datos de cliente"
+
+msgid "Login to"
+msgstr "Ingresar a"
+
+msgid "Are you new at"
+msgstr "Eres nuevo en"
+
+msgid "Register as Customer"
+msgstr "Registrarse como Cliente"
+
+msgid "Sign Up"
+msgstr "Registrarse"
+
+msgid "Create Password"
+msgstr "Crear contraseña"
+
+msgid "Send us a WhatsApp message"
+msgstr "Envíanos un mensaje de WhatsApp"
+
+msgid "Search Results"
+msgstr "Resultados de Búsqueda"
+
+msgid "Search for products"
+msgstr "Buscar productos"
+
+msgid "You might also like"
+msgstr "También podría gustarte"
+
+msgid "You do not see what you are looking for?"
+msgstr "¿No ves lo que estás buscando?"
+
+msgid "There aren't any products that matches your search. Try searching again"
+msgstr "No hay productos que coincidan con tu búsqueda. Intenta buscar nuevamente"
+
+msgid "You've searched for"
+msgstr "Has buscado por"
+
+msgid "Go to Shopping Cart."
+msgstr "Ir al Carro de Compras"
+
+msgid "has been added to the shopping cart."
+msgstr "ha sido añadido al carro de compra."
+
+msgid "have been added to the shopping cart."
+msgstr "han sido añadidos al carro de compra."
+
+msgid "Frequently bought together"
+msgstr "Frecuentemente Comprados juntos"
+
+msgid "Buy these items for"
+msgstr "Compra estos artículos por"
+
+msgid "Add them to cart"
+msgstr "Agrégalos al carrito"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Filter by"
+msgstr "Filtrar por"
+
+msgid "From"
+msgstr "Desde"
+
+msgid "To"
+msgstr "Hasta"
+
+msgid "The maximum price cannot be lower than the minimum price"
+msgstr "El precio máximo no puede ser inferior al precio mínimo"
+
+msgid "You might also be interested in"
+msgstr "También te puede interesar"
+
+msgid "About us"
+msgstr "Sobre Nosotros"
+
+msgid "Click here to add your footer short description"
+msgstr "Click aquí para agregar tu descripción corta del footer"
+
+msgid "Call us"
+msgstr "Llámanos"
+
+msgid "Menu"
+msgstr "Menú"
+
+msgid "Subscribe to Our Newsletter!"
+msgstr "Suscríbete a Nuestro Newsletter"
+
+msgid "Enter your E-mail"
+msgstr "Ingresa tu E-mail"
+
+msgid "Follow Us"
+msgstr "Síguenos"
+
+msgid "Go to"
+msgstr "Ir a"
+
+msgid "Hello"
+msgstr "Hola"
+
+msgid "Click here to add your social networks links"
+msgstr "Haz clic aquí para agregar tus redes sociales"
+
+msgid "All Rights Reserved."
+msgstr "Todos los derechos reservados."
+
+msgid "Choose a Currency"
+msgstr "Escoger Moneda"
+
+msgid "Choose a Language"
+msgstr "Escoger lenguaje"
+
+msgid "See my Details"
+msgstr "Ver mis Detalles"
+
+msgid "Login"
+msgstr "Ingresar"
+
+msgid "Logout"
+msgstr "Salir"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Sold out"
+msgstr "Agotado"
+
+msgid "View Options"
+msgstr "Ver Opciones"
+
+msgid "Add your products"
+msgstr "Añade tus productos"
+
+msgid "Add products"
+msgstr "Añadir productos"
+
+msgid "Back"
+msgstr "Volver"
+
+msgid "Login / Sign up"
+msgstr "Ingresar / Registrarse"
+
+msgid "Wire Transfer"
+msgstr "Transferencia Bancaria"
+
+msgid "Manual Payment"
+msgstr "Pago Manual"
+
+msgid "Reviews"
+msgstr "Reseñas"
+
+msgid "Review"
+msgstr "Reseña"
+
+msgid "Show More"
+msgstr "Muestra más"
+
+msgid "Show Less"
+msgstr "Muestra menos"
+
+msgid "Product Reviews"
+msgstr "Reseñas de productos"
+
+msgid "Sort by:"
+msgstr "Ordenar por:"
+
+msgid "Latest"
+msgstr "Más recente"
+
+msgid "Oldest"
+msgstr "Más antiguo"
+
+msgid "Best ratings"
+msgstr "Mejores reseñas"
+
+msgid "Lowest ratings"
+msgstr "Peores reseñas"
+
+msgid "Add your banners"
+msgstr "Agrega tus banners"
+
+msgid "View All in"
+msgstr "Ver todo en"
+
+msgid "View All"
+msgstr "Ver Todo"
+
+msgid "You need to login in your Instagram account"
+msgstr "Necesitas ingresar a tu cuenta de Instagram"
+
+msgid "Login here"
+msgstr "Ingresa aquí"
+
+msgid "Go to Blog"
+msgstr "Ir al Blog"
+
+msgid "Welcome to"
+msgstr "Bienvenido a"
+
+msgid "Go to collection"
+msgstr "Ir a la colección"
+
+msgid "Testimonials"
+msgstr "Testimonios"

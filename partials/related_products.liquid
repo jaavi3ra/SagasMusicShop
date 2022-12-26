@@ -1,0 +1,133 @@
+{% unless recommended.products_count == 0 %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="block-header text-center">{% t "You might also be interested in" %}</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container related_products">
+  <div class="product-slider related-slider owl-carousel">
+    {% for recommend_product in recommended.products limit: options.related_products_limit %}
+    <div class="item">
+      <div class="product-block text-center {% if options.product_block_2_columns %}mb-md-3 mb-2{% else %}mb-3{% endif %} p-md-3 p-2 rounded trsn">
+        {% capture product_rating %}
+          {% if options.pp_reviews and recommend_product.reviews.count > 0 %}
+            <div class="d-flex justify-content-center">
+              {% render 'product_rating', product: recommend_product %}
+              <div class="pl-2">({{ recommend_product.reviews.count }})</div>
+            </div>
+          {% endif %}
+        {% endcapture %}
+        <a href="{{recommend_product.url}}" class="product-image d-block {% if recommend_product.stock == 0 and recommend_product.stock_unlimited == false  %}not-available{% elsif recommend_product.status == 'not-available'%}not-available{% endif %}">
+
+          {% if options.show_add_to_cart != true or options.disable_shopping_cart %}
+          {% if recommend_product.stock == 0 and recommend_product.stock_unlimited == false %}
+          <span class="badge badge-secondary status-tag">{% t "Sold out" %}</span>
+          {% elsif recommend_product.status == 'not-available' %}
+          <span class="badge badge-secondary status-tag">{% t "Not Available" %}</span>
+          {% endif %}
+          {% endif %}
+
+          {% if recommend_product.discount > 0 %}
+          <span class="badge status-tag sale">{{options.sale_tag_text}} -{{ recommend_product.discount | divided_by:recommend_product.price | times:100 | round:0 }}&percnt;</span>
+          {% endif %}
+
+          {% if recommend_product.images != empty %}
+          <img class="img-fluid img-portfolio img-hover mb-2" src="{{recommend_product.images.first | resize: '255x255'}}" srcset="{{recommend_product.images.first | resize: '255x255'}} 1x,{{recommend_product.images.first | resize: '510x510'}} 2x" alt="{{recommend_product.name | escape}}" />
+          {% else %}
+          <img class="img-fluid img-portfolio img-hover mb-2" src="//assets.jumpseller.com/public/placeholder/themes/simple/no-image-home.png" alt="{{recommend_product.name | escape}}">
+          {% endif %}
+        </a>
+        {% assign variant_prices = recommend_product.variants | sort: 'price' | map: 'price' %}
+        {% assign min_price = variant_prices | first | price %}
+        {% assign max_price = variant_prices | last | price %}
+        <div class="caption">
+          <div class="brand-name small trsn">
+            {% if recommend_product.brand != blank and options.show_brand %}<span class="brand">{{ recommend_product.brand}}</span>{% endif %}
+            <h4><a href="{{recommend_product.url}}">{{ recommend_product.name | truncate:35, ".." }}</a></h4>
+          </div>
+
+          {{ product_rating }}
+
+          {% if options.hide_price != true %}
+          <div class="list-price">
+            {% if recommend_product.discount > 0 %}
+            {% if recommend_product.variants != empty and options.from-prices and min_price != max_price %}<span class="from_price">{% t "From" %} </span>{% endif %}<span class="product-block-normal">{{ recommend_product.price | minus:recommend_product.discount | price }}</span> <span class="product-block-discount text-muted">{{ recommend_product.price | price }}</span>
+            {% else %}
+            {% if recommend_product.variants != empty and options.from-prices and min_price != max_price %}<span class="from_price">{% t "From" %} </span>{% endif %}<span class="product-block-list">{{ recommend_product.price | price }}</span>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% if options.show_add_to_cart and options.disable_shopping_cart != true %}
+          <div class="mt-2 trsn btn_container">
+            {% if recommend_product.stock == 0 and recommend_product.stock_unlimited == false %}
+            <a class="btn btn-outline-dark btn-block disabled" href="{{recommend_product.url}}">{% t "Sold out" %}</a>
+            {% elsif recommend_product.status == 'not-available' %}
+            <a class="btn btn-outline-dark btn-block disabled" href="{{recommend_product.url}}">{% t "Not Available" %}</a>
+            {% else %}
+            {% if recommend_product.options != empty %}
+            <a class="btn btn-primary btn-block" href="{{recommend_product.url}}">{% t "View Options" %}</a>
+            {% else %}
+            <form id="product-form-{{recommend_product.id}}-{{component.id}}" action="{{recommend_product.add_to_cart_url}}" method="post" enctype="multipart/form-data" name="buy">
+              <div class="row adc-form no-gutters product-stock product-available">
+                <div class="{% if options.product_block_2_columns %}col-sm-8{% else %}col-8{% endif %}">
+                  {% capture maxStock  %} max="{{ recommend_product.stock }}" {% endcapture  %}
+                  <div class="quantity {% if options.product_block_2_columns %}mr-md-2 mb-md-0 mb-2{% else %}mr-2{% endif %}">
+                    <div class="product-qty">
+                    <input type="number" class="form-control text-center" id="input-qty-{{recommend_product.id}}" name="qty" min="1" value="1" readonly="readonly" {% if recommend_product.stock_unlimited != true %}{{maxStock}}{% endif %}>
+                    <div class="quantity-nav"><div class="quantity-button quantity-up" onclick="Jumpseller.incrementCounter('input-qty-{{recommend_product.id}}')">+</div><div class="quantity-button quantity-down" onclick="Jumpseller.decrementCounter('input-qty-{{recommend_product.id}}')">-</div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="{% if options.product_block_2_columns %}col-sm-4{% else %}col-4{% endif %}">
+                  {% if options.display_cart_notification %}
+                  <button type="button" onclick="addToCart('{{recommend_product.id}}', '{{recommend_product.name | replace: "'", "" | escape }}', $('#input-qty-{{recommend_product.id}}').val(), getProductOptions('#product-form-{{recommend_product.id}}-{{component.id}}'));" class="adc btn btn-adc btn-block btn-primary" value="{% t 'Add to Cart' %}" ><i class="fas fa-cart-plus"></i></button>
+                  {% else %}
+                  <button type="submit" class="adc btn btn-primary" value="{% t 'Add to Cart' %}" ><i class="fas fa-cart-plus"></i></button>
+                  {% endif %}
+                </div>
+              </div>
+            </form>
+            {% endif %}
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.related-slider').owlCarousel({
+      loop:false,
+      rewind: true,
+      margin:15,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      nav:true,
+      dots: true,
+      thumbs: false,
+      responsive:{
+        0:{
+          items:1,
+          margin:8,
+          stagePadding: 40,
+        },
+        600:{
+          items:3,
+          margin:15,
+          stagePadding: 30,
+        },
+        1000:{
+          items:4,
+          stagePadding: 30,
+        }
+      }
+    })
+  });
+</script>
+{% endunless %}

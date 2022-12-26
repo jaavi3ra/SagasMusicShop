@@ -1,0 +1,119 @@
+/* =============================================================
+Here you will find the "Color Pickers" CSS attributes. You can change them by going to your Admin Panel at Themes > Options.
+If you want to add more pickers to your store's set, or wanna know more about what you can on the code visit the following link https://jumpseller.com/support/creating-a-custom-html-theme#special-variables
+
+© Copyright Simple Theme. Powered by Jumpseller
+============================================================= */
+
+/* =============================================================
+COLOR PICKERS
+============================================================= */
+
+/* Store Background | Default: #FFF */
+body {
+  background-color: {{ options.store_background }};
+  color: {{ options.store_text_color }};
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: {{ options.primary_color }};
+}
+h1.page-header::after, h2.page-header::after {
+  background: {{ options.primary_color }};
+}
+
+a {
+  color: {{ options.links_color }};
+}
+
+a:hover,
+.cart .cart-header .cart-steps a {
+  color: {{ options.links_color_hover }};
+}
+.select {
+  background-image: url('//assets.jumpseller.com/public/placeholder/themes/simple/angle-down.svg');
+}
+.select:disabled, .select[aria-disabled=true] {
+  background-image: url(//assets.jumpseller.com/public/placeholder/themes/simple/angle-down.svg');
+}
+/* Header */
+header {
+  background-color: {{ options.header_bg }};
+  color: {{ options.header_color }};
+}
+
+header a,
+header i,
+header .navbar-brand {
+  color: {{ options.header_color }};
+}
+
+.message-top {
+  background-color: {{ options.topbar_bg }};
+  color: {{ options.topbar_color }};
+}
+
+#main-menu,
+#main-menu .dropdown-menu {
+  background-color: {{options.menu_bg}}!important;
+}
+
+#main-menu li a{
+  color: {{options.menu_color}}!important;
+}
+#main-menu li.sfhover,
+#main-menu li a:hover {
+  background-color: {{options.menu_hover_bg}}!important;
+}
+
+.toast.toast-success {background-color: {{ options.cart_notification_color }};}
+
+footer {
+  background-color: {{options.footer_background_color}};
+  color: {{ options.footer_color }};
+}
+
+footer h5,
+footer a {
+  color: {{ options.footer_color }};
+}
+
+/* Sale color */
+.product-block .status-tag.sale { background-color: {{options.sale_tag}}!important;}
+.product-block-normal,
+.cart-product-discount{color: {{options.sale_tag}}!important;}
+
+/* Button colors */
+.btn.btn-primary,
+.quantity-button:hover {background-color: {{options.main_button_color}};}
+.btn.btn-secondary{background-color: {{options.secondary_button_color}};}
+.btn.btn-outline-secondary {border-color: {{options.secondary_button_color}}; color: {{options.secondary_button_color}};}
+.btn.btn-outline-secondary:hover {background-color: {{options.secondary_button_color}}; color: #fff;}
+.btn.btn-adc,
+.cart-size {background-color: {{options.adc_button_color}};}
+.btn:hover {background-color: {{options.main_button_color_hover}}!important;}
+.btn.btn-link:hover {background-color: transparent!important;}
+
+/* Product Block */
+{% if options.not_available_img %}
+.product-block .not-available img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+{% endif %}
+{% if options.product_shadow %}
+.product-block:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+{% endif %}
+
+/* Form Checkout */
+#email-suggestion a {
+  color: {{ options.primary_color }} !important;
+}
+
+/*  Store WhatsApp */
+.store-whatsapp {color:{{ options.store_whatsapp_color_text }}!important;background:{{ options.store_whatsapp_color_background }}!important;}
+.store-whatsapp:hover {background:{{ options.store_whatsapp_color_background_hover }}!important;}

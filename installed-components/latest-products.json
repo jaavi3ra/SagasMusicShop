@@ -1,0 +1,14 @@
+{
+  "name": "Latest Products",
+  "identifier": "",
+  "icon": "star",
+  "line": 8,
+  "column": 1,
+  "visibility": true,
+  "options": {
+    "title": "Nuevos Productos",
+    "limit": 4
+  },
+  "theme_block": "home",
+  "theme_block_template": "Default"
+}

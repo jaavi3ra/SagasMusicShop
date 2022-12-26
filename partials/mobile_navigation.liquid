@@ -1,0 +1,137 @@
+<!-- Navigation Mobile -->
+<div class="mobilenav d-lg-none trsn">
+  <div class="menu-header">
+    <div class="item item-1 trsn">
+      <i class="fas fa-search"></i>
+      <div class="jumpseller-autocomplete" data-input-wrapper-prefix="d-none" data-input-wrapper="w-100" data-panel="force-top-fixed popover" data-input="no-outline">
+        <form id="search_mini_form_mobile" class="navbar-form form-inline trsn" method="get" action="{{search.url_send}}">
+          <input type="text" value="{{search.query}}" name="q" class="form-text" onFocus="javascript:this.value=''" placeholder="{% t 'Search for products' %}" />
+        </form>
+      </div>
+    </div>
+    {% if languages.size > 1 %}
+      <div class="item item-2 trsn">
+        {% for language in languages %}
+          {% if languages.first.code == language.code %}
+            <span>
+              {{- language.code -}}
+              <i class="fas fa-angle-down" aria-hidden="true"></i></span>
+          {% endif %}
+        {% endfor %}
+        <div class="lang-menu">
+          {% for language in languages -%}
+            <a href="{{language.url}}" class="trsn" title="{{language.name}}">{{ language.name }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if store.currencies_codes.size > 1 %}
+      <div class="item item-3 trsn">
+        <span id="current_currency_mobile">{{ current_currency }}</span
+        ><i class="fas fa-angle-down" aria-hidden="true"></i>
+        <div class="lang-menu">
+          {% for currency in store.currencies_codes %}
+            <a onclick="Jumpseller.setClientCurrency('{{currency}}');" title="{{currency}}">{{ currency }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="menu-top"></div>
+  <div class="mobilenav-inner">
+    <ul class="menu-mobile trsn">
+      {% for item in menu.main.items %}
+        {% include 'mobile_menu' with item %}
+      {% endfor %}
+      <li>
+        {% if store.customers_enabled %}
+          <div
+            class="login"
+            {% if template == "customer_account" %}
+              class="active"
+            {% endif %}
+          >
+            <a
+              href="{% if customer %}{{customer_account_url}}{% else %}{{customer_login_url}}{% endif %}"
+              id="login-link-2"
+              class="trsn nav-link"
+              title="{% if customer %}{% t "See my Details" %}{% else %}{% t "Login / Sign up" %}{{store.name}}{% endif %}"
+            >
+              <i class="fas fa-user"></i>
+              <span class="customer-name">
+                {% if customer %}{{ customer.name }}{% else %}{% t "Login / Sign up" %}{% endif %}
+              </span>
+            </a>
+          </div>
+        {% endif %}
+      </li>
+      <li>
+        {% if customer %}
+          <div class="cart">
+            <a title="{% t 'Logout' %}" href="{{customer.logout_url}}" class="nav-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>{% t 'Logout' %}</span>
+            </a>
+          </div>
+        {% endif %}
+      </li>
+      {% if social.facebook.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.facebook.url }}" class="trsn" title="{% t 'Go to' %} Facebook" target="_blank">
+            <i class="fab fa-facebook-f fa-fw"></i>Facebook
+          </a>
+        </li>
+      {% endif %}
+      {% if social.twitter.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.twitter.url }}" class="trsn" title="{% t 'Go to' %} Twitter" target="_blank">
+            <i class="fab fa-twitter fa-fw"></i>Twitter
+          </a>
+        </li>
+      {% endif %}
+      {% if social.pinterest.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.pinterest.url }}" class="trsn" title="{% t 'Go to' %} Pinterest" target="_blank">
+            <i class="fab fa-pinterest fa-fw"></i>Pinterest
+          </a>
+        </li>
+      {% endif %}
+      {% if social.instagram.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.instagram.url }}" class="trsn" title="{% t 'Go to' %} Instagram" target="_blank">
+            <i class="fab fa-instagram fa-fw"></i>Instagram
+          </a>
+        </li>
+      {% endif %}
+      {% if social.whatsapp.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.whatsapp.url }}&text={% t 'Hello'%}%20{{store.name}}" class="trsn" title="WhatsApp"target="_blank">
+            <i class="fab fa-whatsapp fa-fw"></i>WhatsApp
+          </a>
+        </li>
+      {% endif %}
+      {% if social.youtube.url != blank %}
+        <li class="social-item">
+          <a href="{{ social.youtube.url }}" class="trsn" title="Youtube" target="_blank">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </li>
+      {% endif %}
+      {% if social.tiktok.url != blank %}
+        <li class="social-item">
+          <a href="{{social.tiktok.url}}" class="trsn" title="{% t 'Go to' %} Tiktok" target="_blank">
+            <i class="fab fa-tiktok fa-fw"></i> Tiktok
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+<div class="nav-bg-opacity"></div>

@@ -1,0 +1,161 @@
+{
+  "name": "Banners",
+  "icon": "th-large",
+  "help": "",
+  "max_usage": null,
+  "templates_in": [
+    "home"
+  ],
+  "options": {
+    "banner_same_size": {
+      "name": "Adjust images size",
+      "type": "checkbox",
+      "help": "",
+      "default": false
+    },
+    "banner-1": {
+      "name": "Banner 1 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-1": {
+      "name": "Banner 1 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-1": {
+      "name": "Banner 1 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-2": {
+      "name": "Banner 2 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-2": {
+      "name": "Banner 2 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-2": {
+      "name": "Banner 2 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-3": {
+      "name": "Banner 3 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-3": {
+      "name": "Banner 3 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-3": {
+      "name": "Banner 3 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-4": {
+      "name": "Banner 4 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-4": {
+      "name": "Banner 4 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-4": {
+      "name": "Banner 4 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-5": {
+      "name": "Banner 5 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-5": {
+      "name": "Banner 5 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-5": {
+      "name": "Banner 5 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-6": {
+      "name": "Banner 6 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-6": {
+      "name": "Banner 6 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-6": {
+      "name": "Banner 6 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-7": {
+      "name": "Banner 7 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-7": {
+      "name": "Banner 7 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-7": {
+      "name": "Banner 7 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    },
+    "banner-8": {
+      "name": "Banner 8 Image (Suggested: 360x360)",
+      "type": "file",
+      "help": "",
+      "default": ""
+    },
+    "title-banner-8": {
+      "name": "Banner 8 Title",
+      "type": "input",
+      "help": "",
+      "default": ""
+    },
+    "link-banner-8": {
+      "name": "Banner 8 Link",
+      "type": "link",
+      "help": "",
+      "default": ""
+    }
+  }
+}
